@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 
     <meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-
     <meta property="og:title" content="Napoleon Bonaparte">
     <meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
     <meta property="og:image" context="Napoleon.png">
     <style>
-        body 
+        body   
         {
             text-align: center;
             background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
@@ -25,39 +24,34 @@
 </head>
 
 <body style="background-color:black">
-    <nav class="navbag">
-        <div class="navbar__contaienr"></div>
-            <a href="/" id="navbar_logo">NEXT</a>
-            <div class="navbar__toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="/" class="navbar__links"> Pagina Principala </a>
-                
-            </li>
-            <li class="navbar__item">
-                <a href="/tech.html" class="navbar__links"> TEch </a>
-                
-            </li>
-            <li class="navbar__item">
-                <a href="/tech.html" class="navbar__links"> Nu am nevoie de atatea </a>
-            </li>
-            <li class="navbar__btn">
-                <a href="/" class="buton"> Logare </a>
-            </li>
-        </ul>
-    </nav>
+
 
     <div class="dropdown black">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
+        <button onclick="myFunction()" class="dropbtn">≡</button>
+        <div id="myDropdown" class="dropdown-content">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
       </div>
+      <script>
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+
 </body>
 </html>
