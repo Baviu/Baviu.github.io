@@ -24,7 +24,7 @@
       width: 100%;
 
   }
-  .logo {
+  .logo img {
     height: 10px;
     width: 10px;
       display: flex;
@@ -62,4 +62,18 @@
   .button-container {
       width: 100%;
       margin-top: 20px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image {
+    max-width: 25%;
+    margin-right: 20px;
+  }
+  
+  .text {
+    flex-grow: 1;
   }
