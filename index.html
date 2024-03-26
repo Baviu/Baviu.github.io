@@ -19,11 +19,38 @@
             background-position: center center;
             background-attachment: fixed;
             background-size: cover;
-        }
+        }   
     </style>
+    	<script>
+        function toggleMenu() {
+          var menu = document.getElementById('menu');
+          menu.classList.toggle('open');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+          var hamburger = document.getElementById('hamburger');
+          hamburger.addEventListener('click', toggleMenu);
+        });
+      </script>
 </head>
 
 <body style="background-color:black">
-    
+
+  <div class="top-line">
+		<a class="logo">
+			<img src="images/logo2.png" alt="Logo">
+		</a>
+		<div class="hamburger" id="hamburger">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+	</div>
+	<div class="menu" id="menu">
+		<div class="button-container">
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+		</div>
+	</div>
 </body>
 </html>
