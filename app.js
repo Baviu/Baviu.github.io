@@ -40,7 +40,14 @@ document.getElementById('language-selector').addEventListener('change', function
 });
 
 
+function checkMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
+if (checkMobile()) {
+  const epoca = document.querySelector('.epoca');
+  epoca.style.display = 'none';
+}
 
 
 

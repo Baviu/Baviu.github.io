@@ -117,16 +117,16 @@
 
 .textbox {
   position: fixed;
-  bottom: 120px;
+  bottom: 90px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(139, 117, 117, 0.1);
   padding: 10px 15px;
   border-radius: 0px;
   z-index: 100;
   font-weight: 900;
   font-size:70px;
   text-shadow: -1px 0 red, 0 3px white, 1px 0 blue, 0 -1px black;
+  z-index: -3;
 }
 
 .textbox-text {
@@ -146,5 +146,6 @@
   left: 100px;
   top: 20px;
   font-family: "ghetto";
+
 }
 

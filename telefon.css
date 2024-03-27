@@ -2,4 +2,7 @@
   body {
     background-size: auto;
   }
+  .epoca{
+    display: none;
+  }
 }
