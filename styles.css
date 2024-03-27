@@ -45,7 +45,8 @@
   z-index: -1;
   width: 270px;
   background:#11101d;
-
+  display: block;
+  overflow-y: scroll; 
 }
   
   #language-selector {
