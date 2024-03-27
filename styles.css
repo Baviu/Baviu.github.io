@@ -43,7 +43,7 @@
   padding: 20px;
   box-sizing: border-box;
   z-index: -1;
-  width: 360px;
+  width: 270px;
   background:#11101d;
 
 }
@@ -51,7 +51,7 @@
 
 
   #language-selector {
-    background-color: #140707;
+    background-color: #000000;
     color: #607E96;
     font-size: 16px;
     border-radius: 3px;
