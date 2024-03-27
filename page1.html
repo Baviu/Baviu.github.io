@@ -2,14 +2,16 @@
 <html lang="en">
     <!-- asta e de comentarii -->
 <head>
+  <meta charset="UTF-8" />
     <title>Franta Napoleoniana</title>
     <link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="styles.css" href="butoane.css">
+    <script src="app.js"></script>
     <meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
     <meta property="og:title" content="Napoleon Bonaparte">
     <meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
     <meta property="og:image" context="Napoleon.png">
+    
     <style>
         body   
         {
@@ -21,14 +23,97 @@
             background-size: cover;
         }   
     </style>
-    	<script>
-        function toggleMenu() {
-          var menu = document.getElementById('menu');
-          menu.classList.toggle('open');
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-          var STANGA = document.getElementById('STANGA');
-          STANGA.addEventListener('click', toggleMenu);
-        });
-      </script>
 </head>
+
+
+<body>
+  <div class="top-line">
+    <button id="hamburger" class="hamburger">
+      ☰
+    </button>
+    <div class="logo-name">
+      <img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
+    </div>
+  </div>
+
+  <div class="menu" id="menu" style="display: block;">
+      <ul class="menu-items ">
+        <li class="item">
+          <div class="submenu-item">
+            <span>First submenu</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-title">
+            </div>
+            <li class="item">
+              <a href="page1.html">First sublink</a>
+            </li>
+            <li class="item">
+              <a href="#">First sublink</a>
+            </li>
+            <li class="item">
+              <a href="#">First sublink</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="item">
+          <div class="submenu-item">
+            <span>Second submenu</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-title">
+            </div>
+            <li class="item">
+              <a href="#">Second sublink</a>
+            </li>
+            <li class="item">
+              <a href="#">Second sublink</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="item">
+          <div class="submenu-item">
+            <span>Third submenu</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-title">
+            </div>
+            <li class="item">
+              <a href="#">third sublink</a>
+            </li>
+            <li class="item">
+              <a href="#">Third sublink</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <script src="app.js"></script>
+
+
+	</div>
+    <div class="lang-switcher">
+      <select id="language-selector">
+        <option value="Ro" selected>🌐 Română </option>
+        <option value="En">🌐 English</option>
+      </select>
+    </div>
+
+
+<div class="textbox">
+  <p class="textbox-text">În Căutarea Marelui Cuceritor</p>
+  <p class="textbox-text">Napoleon și Epoca sa</p>
+</div>
+<div class="epoca">
+  <a href="index.html">
+  <p class="epoca-text">Napoleon și Epoca sa</p>
+</a>
+</button>
+
+</body>
+</html>

@@ -38,3 +38,22 @@ switchLanguage('Ro');
 document.getElementById('language-selector').addEventListener('change', function (event) {
   switchLanguage(event.target.value);
 });
+
+
+
+
+
+
+window.onload = () => {
+  const hamburger = document.getElementById("hamburger");
+  hamburger.addEventListener("click", () => {
+    // code to handle click event
+  });
+};
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    hamburger.addEventListener("click", () => {
+      // code to handle click event
+    });
+  });
