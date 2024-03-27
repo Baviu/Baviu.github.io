@@ -2,9 +2,12 @@
 <html lang="en">
     <!-- asta e de comentarii -->
 <head>
+  <meta charset="UTF-8" />
     <title>Franta Napoleoniana</title>
     <link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" href="butoane.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="app.js"></script>
 
     <meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
     <meta property="og:title" content="Napoleon Bonaparte">
@@ -21,39 +24,92 @@
             background-size: cover;
         }   
     </style>
-    	<script>
-        function toggleMenu() {
-          var menu = document.getElementById('menu');
-          menu.classList.toggle('open');
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-          var hamburger = document.getElementById('hamburger');
-          hamburger.addEventListener('click', toggleMenu);
-        });
-      </script>
 </head>
 
-<body style="background-color:black">
+<body>
 
   <div class="top-line">
-    <button class="hamburger" id="hamburger">
+    <button id="hamburger" class="hamburger">
       ☰
     </button>
     <div class="logo-name">
-      <img class="logo" src="images/logo2.png" alt="Logo"> </img>
-      <div class="franta-line">
-        <span>Franta</span>
-      </div>
-      <div class="napoleniana-line">
-        <span>Naopoleniana</span>
-      </div>
+      <img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
     </div>
   </div>
-  <div class="menu" id="menu">
-    <div class="button-container">
-      <button>1</button>
-      <button>2</button>
-    </div>
+
+  <div class="menu" id="menu" >
+      <ul class="menu-items ">
+        <li class="item">
+          <div class="submenu-item" style="cursor: pointer;">
+            <span>First submenu</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-title">
+            </div>
+            <li class="item">
+              <a href="page1.html">First sublink</a>
+            </li>
+            <li class="item">
+              <a href="#">First sublink</a>
+            </li>
+            <li class="item">
+              <a href="#">First sublink</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="item">
+          <div class="submenu-item">
+            <span>Second submenu</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-title">
+            </div>
+            <li class="item">
+              <a href="#">Second sublink</a>
+            </li>
+            <li class="item">
+              <a href="#">Second sublink</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="item">
+          <div class="submenu-item">
+            <span>Third submenu</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-title">
+            </div>
+            <li class="item">
+              <a href="#">third sublink</a>
+            </li>
+            <li class="item">
+              <a href="#">Third sublink</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  </nav>
+  <script src="app.js"></script>
+
+
 	</div>
+    <div class="lang-switcher">
+      <select id="language-selector">
+        <option value="Ro" selected>🌐 Română </option>
+        <option value="En">🌐 English</option>
+      </select>
+    </div>
+
+
+  
+  
+</script>
+
+  
 </body>
 </html>
