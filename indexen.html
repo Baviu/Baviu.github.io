@@ -32,7 +32,7 @@
       ☰
     </button>
     <div class="logo-name">
-      <a href="index.html">
+      <a href="indexen.html">
       <img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
     </a>
     </div>
@@ -42,7 +42,7 @@
     <div class="sidebar-content">
       <div clas="sidebar">
         <ul class="side-link">
-          <li class="side-item"><a href="page1.html">Copilăria</a></li>
+          <li class="side-item"><a href="page1en.html">Childhood</a></li>
           <li class="side-item sub-menu"><a>Războaiele Celo Doua Coaliții</a>
             <ul>
               <li><a href=page2.html>Războiul primei coaliții</a></li>
@@ -59,6 +59,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
   <script>
+    
     $(document).ready(function(){
         $('ul li').click(function(){
             $(this).siblings().removeClass('active');
@@ -71,35 +72,37 @@
   sidebar.classList.toggle ('active')
   btn.classList.toggle ('active')
 })
-  </script>
-	</div>
 
-  <div class="lang-switcher">
-    <select id="language-selector" onchange="switchLanguage(this.value)">
-      <option id="1" value="Ro" selected>🌐 Română </option>
-      <option id="2" value="En">🌐 English</option>
-    </select>
-  </div>
-  
-  <script type="text/javascript">
-    function switchLanguage(language) {
-      if (language === 'Ro') {
-        window.location.href = 'index.html';
-      } else if (language === 'En') {
-        window.location.href = 'indexen.html';
-      }
-    }
   </script>
+
+<div class="lang-switcher">
+	<select id="language-selector" onchange="switchLanguage(this.value)">
+		<option value="En">🌐 Română</option>
+		<option value="Ro" selected>🌐 English </option>
+	</select>
+</div>
+
+<script type="text/javascript">
+  function switchLanguage(language) {
+
+		if (language === 'Ro') {
+      window.location.href = 'indexen.html';
+    } else {
+      window.location.href = 'index.html';
+    }
+  }
+</script>
 
 <div class="textbox">
   <p class="textbox-text">Napoleon</p>
 </div>
 
 <div class="epoca">
-  <a href="index.html">  
-  <p class="epoca-text">Napoleon</p>
-  <p class="epoca-text">și Epoca sa</p>
-</a>
+  <a href="indexen.html">
+  <p class="epoca-text">Napoleonic </p>
+  <p class="epoca-text">Era</p>
+  </a>
   </div>
+</div>
 </body>
 </html>
