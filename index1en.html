@@ -7,11 +7,11 @@
 		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
 		<link rel="stylesheet" href="styles.css">
 		<link rel="stylesheet" href="informatii.css">
-		<script src="app.js"></script>
 		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
 		<meta property="og:title" content="Napoleon Bonaparte">
 		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
 		<meta property="og:image" context="Napoleon.png">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		
 		<style>
 				body    
@@ -74,23 +74,24 @@
 	sidebar.classList.toggle ('active')
 	btn.classList.toggle ('active')
 })
-
-	</script>
-
+</script>
 
 <div class="lang-switcher">
 	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option id="1" value="Ro" selected>🌐 Română </option>
-		<option id="2" value="En">🌐 English</option>
+		<option value="En">🌐 Română</option>
+		<option value="Ro" selected>🌐 English </option>
+
+
 	</select>
 </div>
 
 <script type="text/javascript">
   function switchLanguage(language) {
-    if (language === 'Ro') {
-      window.location.href = 'index1.html';
-    } else if (language === 'En') {
+
+		if (language === 'Ro') {
       window.location.href = 'index1en.html';
+    } else {
+      window.location.href = 'page1.html';
     }
   }
 </script>

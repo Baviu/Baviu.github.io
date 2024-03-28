@@ -54,16 +54,6 @@
   }
 
 
-  .menu {
-    /* Same styles as before... */
-    display: none;
-  }
-  
-  .menu.show {
-    display: block;
-  }
-
-
 
 .menu a {
   color: #fff;
