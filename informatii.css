@@ -23,7 +23,8 @@
     margin-top: 50px;
     z-index: -1;
     border-radius: 25px;
-    height:auto;       
+    height:auto;  
+   
     }
 
 
@@ -38,6 +39,7 @@
   color:white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   z-index: 1;
+margin-top: 10px;
 }
 
 .mare{
@@ -59,6 +61,13 @@
     height: 330px; 
     width:auto;
     float: right;
+  }
+  
+  .p2{
+    background-size:contain;
+    background-repeat:no-repeat;
+    width: 80%;
+    border-radius: 25px;
   }
 
 
