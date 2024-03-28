@@ -72,15 +72,14 @@
 
     .gray-square {
       width: 100%;
+      margin-left:0%;
     }
     .chestii, .chestii2 {
       position:left;
       width:75%;
   }
     .p1{
-      width:30%;
-      right: 0px;
-      top: 70px;
+      display: none;
     }
     .chestii2{
       top:auto
