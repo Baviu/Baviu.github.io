@@ -106,26 +106,32 @@
 .textbox {
   position: fixed;
   bottom: 60px;
-  left: 50%;
+  left: 50%;  
   transform: translateX(-50%);
-  padding: 10px 15px;
+  padding: 10px 15px; 
   border-radius: 0px;
   z-index: 100;
   font-weight: 900;
-  font-size:70px;
-  text-shadow: -1px 0 red, 0 3px white, 1px 0 blue, 0 -1px black;
+  font-size:110px;
   z-index: -3;
+  text-shadow: -1px 1px 0 #ffffff,
+                2px 1px 0 #000000,
+                2px -1px 0 #000000,
+                -2px -1px 0 #000000;
+                text-shadow: 15px 30px 15px rgb(255, 255, 255, 1); 
+                
 }
 
 
 .textbox-text  {
   font-family: 'League Spartan';
-  color: #000000;
+  color: #752626;
   text-align: center;
 }
 .epoca-text{
   font-family: 'League Spartan';
-  color:white;
+  color:#607E96;
+  text-decoration: none;
 }
 
 
@@ -138,8 +144,11 @@
   font-family: "ghetto";
   text-align: center;
   font-size: 30px;
+  text-decoration: none;
 }
-
+a:visited, a:hover, a:active {
+  color: transparent;
+}
 
 ::-webkit-scrollbar-thumb {
   background: red; 
