@@ -182,15 +182,17 @@ nav {
   display: block;
   width: 80%;
   padding: -0px 0px 150px 0px;
+
 }
 
 .side-item {
   list-style: попе;
   text-decoration: none;
   border: 1px solid transparent;
-  border-bottom-color: #580000;
+  border-bottom-color: #ffffff;
   text-align: left;
-  margin-left: -20px;
+  margin-left: -34px;
+
   }
 
 .side-item:hover {
@@ -200,10 +202,10 @@ nav {
  .side-item a {
    color: #607e96;
    line-height: 50px;
-   font-family: sans-serif;
-   font-size: 24px;
+   font-size: 18px;
    text-decoration: none;
    cursor: pointer;
+   text-indent: 0px;
   }
 
   .sub-menu:before {

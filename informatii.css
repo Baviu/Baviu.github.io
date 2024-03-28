@@ -4,19 +4,16 @@
   background-color: #32363D;
   margin-left: 20%;
   z-index: -2;
-  margin-top: -1px;
   position:center;
 
 }
 .chestii {
-  top: 30px;
   margin-left: 3%;
   width: 70%;
     background-color: rgba(15, 31, 85, 1);
     z-index: -1;
-    border-radius: 25px;
+    border-radius: 55px;
     height: auto;
-    margin-top: 10px;
   }
 
   .chestii2 {
@@ -55,13 +52,10 @@
 }
 
 
-
-
-
   .p1{
     background-size:contain;
     background-repeat:no-repeat;
-    background-position:center;
+    background-position:right;
     height: 330px; 
     width:auto;
     float: right;
