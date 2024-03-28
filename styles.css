@@ -167,6 +167,10 @@ a:visited, a:hover, a:active {
   .textbox{
     font-size: 80px;
   }
+  .gray-square {
+    width: 100%;
+    left:0px;
+  }
   
 }
 
