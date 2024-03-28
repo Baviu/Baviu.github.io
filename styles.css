@@ -45,7 +45,7 @@
     border-radius: 3px;
     padding: 2px;
     display: inline-block;
-    position: absolute;
+    position: fixed;
     top: 22px;
     right: 120px;
     cursor: pointer;
@@ -139,7 +139,7 @@
 .epoca{
   color: #607E96;
   cursor: pointer;
-  position: absolute; 
+  position: fixed; 
   left: 100px;
   top: 10px;
   font-family: "ghetto";
@@ -181,12 +181,12 @@ nav {
   width: 0px;
   background-color: #11101D;
   transition: 0.8s;
-  }
+  } 
 
 .side-list {
   position: absolute;
   display: block;
-  width: 100%;
+  width: 80%;
   padding: -0px 0px 150px 0px;
 }
 
@@ -194,7 +194,7 @@ nav {
   list-style: попе;
   text-decoration: none;
   border: 1px solid transparent;
-  border-bottom-color: #ffffff;
+  border-bottom-color: #580000;
   text-align: left;
   margin-left: -20px;
   }
@@ -204,22 +204,21 @@ nav {
   }
 
  .side-item a {
-   color: #ffffff;
+   color: #607e96;
    line-height: 50px;
    font-family: sans-serif;
    font-size: 24px;
    text-decoration: none;
    cursor: pointer;
-   
   }
 
   .sub-menu:before {
     content: '➤';
-    font-family: fontAwesome;
+    font-family:Luminari, fantasy;
     position: absolute;
     line-height: 50px;
     color: #ffffff;
-    left: 40%;
+    left: 90%;
     
   }
 
@@ -228,7 +227,6 @@ nav {
   }
 
   .side-item ul {
-    margin-left: -45px;
     position: relative;
     background-color: #313338;
     box-sizing: border-box;
@@ -270,3 +268,7 @@ nav.active .sidebar-content{
   animation-name: fadeIn;
   animation-duration: 3s;
 }
+
+
+
+

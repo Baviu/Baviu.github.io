@@ -1,0 +1,54 @@
+.gray-square {
+  width: 60%;
+  height: auto;
+  background-color: #32363D;
+  position: absolute;
+  top: 80px;
+  left: 20%;
+  z-index: -2;
+  min-height: 865px;
+  position:center;
+}
+
+
+.long-paragraph {
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0 auto;;
+  max-width:auto;
+  padding: 16px;
+  box-sizing: border-box;
+  color:white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  z-index: 1;
+}
+
+.mare{
+  font-size: 33px;
+  line-height: 1;
+  text-align: justify;
+  margin: 0 auto;;
+  max-width:auto;
+  padding: 16px;
+  box-sizing: border-box;
+  color:white
+}
+
+
+.chestii {
+  top: 80px;
+  left: 25%;
+  width: 30%;
+    background-color: rgba(15, 31, 85, 0.7);
+    position: absolute;
+    z-index: -1;
+  }
+
+
+  .p1{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+  }
