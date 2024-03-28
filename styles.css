@@ -163,6 +163,10 @@ a:visited, a:hover, a:active {
   .epoca-text {
     display: none;
   }
+  .textbox{
+    font-size: 80px;
+  }
+  
 }
 
 
