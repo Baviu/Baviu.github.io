@@ -25,7 +25,8 @@
     background-color:#607E96;
     margin-top: 50px;
     z-index: -1;
-    border-radius: 25px;       
+    border-radius: 25px;
+    height:auto;       
     }
 
 
@@ -71,10 +72,9 @@
 
     .gray-square {
       width: 100%;
-      left:0px;
     }
     .chestii, .chestii2 {
-      left:2%;
+      position:left;
       width:75%;
   }
     .p1{
