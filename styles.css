@@ -114,18 +114,19 @@
   font-weight: 900;
   font-size:110px;
   z-index: -3;
-  text-shadow: -1px 1px 0 #ffffff,
-                2px 1px 0 #000000,
-                2px -1px 0 #000000,
-                -2px -1px 0 #000000;
-                text-shadow: 15px 30px 15px rgb(255, 255, 255, 1); 
+  font-size: 120px;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-fill-color: #607e96;
+  font-family: Impact, Charcoal, sans-serif;
+  text-shadow: 44px 24px 34px #b51717;
                 
 }
 
 
 .textbox-text  {
   font-family: 'League Spartan';
-  color: #752626;
+  color: #851e1e;
   text-align: center;
 }
 .epoca-text{
