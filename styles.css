@@ -152,8 +152,7 @@
 
 @media only screen and (max-width: 768px) {
   .epoca-text {
-    font-size: 15px;
-    padding: 3px;
+    display: none;
   }
 }
 
