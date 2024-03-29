@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <title>Franta Napoleoniana</title>
+    <link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
+    <link rel="stylesheet" href="styles.css" href="butoane.css">
+    <script src="app.js"></script>
+    <meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
+    <meta property="og:title" content="Napoleon Bonaparte">
+    <meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
+    <style>
+        body   
+        {
+            text-align: center;
+            background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            
+        }   
+    </style>
+    <link rel="stylesheet" type="text/css" href="test.css">
+</head>
+
+<body>
+
+  <div class="rar">
+    <div id="question"></div>
+    <form id="options" style="color: #607E96;">
+      <input type="radio" name="answer" value="a" id="optionA">
+      <label for="optionA" style="color: #607E96; font-size: 26px;">Option A</label><br>
+      <input type="radio" name="answer" value="b" id="optionB">
+      <label for="optionB" style="color: #607E96; font-size: 26px;">Option B</label><br>
+      <input type="radio" name="answer" value="c" id="optionC">
+      <label for="optionC" style="color: #607E96; font-size: 26px;">Option C</label><br>
+      <input type="radio" name="answer" value="d" id="optionD">
+      <label for="optionD" style="color: #607E96; font-size: 26px;">Option D</label><br>
+    </form>
+    <button type="submit" onclick="submitAnswer()" style="background-color: #607E96; font-size: 50px; color: white; border: 2px solid black; padding: 10px; cursor: pointer;">Submit Answer</button>
+  </div>
+  
+  <script src="script.js"></script>
+
+  <div class="top-line">
+    <button class="toggle-menu" id="toggle-click"> 
+      ☰
+    </button>
+    <div class="logo-name">
+      <a href="index.html">
+      <img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
+    </a>
+    </div>
+  </div>
+
+	<nav id="sidebar">
+		<div class="sidebar-content">
+			<div clas="sidebar">
+				<ul class="side-link">
+					<li class="side-item"><a href="page1.html">Copilăria</a></li>
+					<li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (I)</a>
+						<ul>
+							<li><a href=page2.html>Războiul primei coaliții</a></li>
+							<li><a href=page3.html>Războiul celei de-a doua coaliții</a></li>
+						</ul>
+            <li class="side-item"><a href="page4.html">Campania lui Napoleon în Egipt</a></li>
+            <li class="side-item"><a href="page5.html">Lovitura de stat</a></li>
+            <li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (II)</a>
+              <ul>
+                <li><a href=page6.html>A treia coaliție 1805</a></li>
+                <li><a href=page7.html>A patra coaliție 1806 - 1807</a></li>
+                <li><a href=page8.html>A cicea coaliție 1806 - 1807</a></li>
+
+              </ul>
+              <li class="side-item"><a href="page9.html">Campania Din Rusia</a></li>
+              <li class="side-item"><a href="page10.html">Coalitia a Șasea</a></li>
+              <li class="side-item"><a href="page11.html">Cele o sută de zile</a></li>
+              <li class="side-item"><a href="test.html">Evaluare!</a></li>
+        </ul>
+      </div>>
+      </div>
+    </div>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <script>
+    $(document).ready(function(){
+        $('ul li').click(function(){
+            $(this).siblings().removeClass('active');
+            $(this).toggleClass('active');
+    })
+  })
+  const sidebar = document.getElementById('sidebar');
+  const btn = document.getElementById('toggle-click');
+  btn.addEventListener('click', () => {
+  sidebar.classList.toggle ('active')
+  btn.classList.toggle ('active')
+})
+  </script>
+	</div>
+
+  <div class="lang-switcher">
+    <select id="language-selector" onchange="switchLanguage(this.value)">
+      <option id="1" value="Ro" selected>🌐 Română </option>
+      <option id="2" value="En">🌐 English</option>
+    </select>
+  </div>
+  
+  <script type="text/javascript">
+    function switchLanguage(language) {
+      if (language === 'Ro') {
+        window.location.href = 'index.html';
+      } else if (language === 'En') {
+        window.location.href = 'indexen.html';
+      }
+    }
+  </script>
+
+<div class="textbox">
+  <p class="textbox-text">Napoleon</p>
+</div>
+
+<div class="epoca">
+  <a href="index.html">  
+  <p class="epoca-text">Napoleon</p>
+  <p class="epoca-text">și Epoca sa</p>
+</a>
+  </div>
+</body>
+</html>

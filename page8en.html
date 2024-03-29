@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+		<title>Franta Napoleoniana</title>
+		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="informatii.css">
+		<script src="app.js"></script>
+		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
+		<meta property="og:title" content="Napoleon Bonaparte">
+		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
+		<meta property="og:image" context="Napoleon.png">
+		<style>
+				body    
+				{
+						text-align: center;
+						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-attachment: fixed;
+						background-size: cover;
+				}   
+		</style>
+</head>
+
+
+<body>
+<div class="top-line">
+		<button class="toggle-menu" id="toggle-click"> 
+			☰
+		</button>
+		<div class="logo-name">
+			<a href="index.html">
+			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
+		</a>
+		</div>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-content">
+    <div clas="sidebar">
+      <ul class="side-link">
+        <li class="side-item"><a href="page1en.html">Childhood</a></li>
+        <li class="side-item sub-menu"><a>The wars of the coalitions (I)</a>
+          <ul>
+            <li><a href=page2en.html>War of the First Coalition</a></li>
+            <li><a href=page3en.html>War of the Second Coalition</a></li>
+          </ul>
+          <li class="side-item"><a href="page4en.html">Napoleon's Campaign in Egypt</a></li>
+          <li class="side-item"><a href="page5en.html">Coup of 18 Brumaire</a></li>
+          <li class="side-item sub-menu"><a>The wars of the coalitions (II)</a>
+            <ul>
+              <li><a href=page6en.html>War of the Third Coalition 1805</a></li>
+              <li><a href=page7en.html>War of the Forth Coalition 1806 - 1807</a></li>
+              <li><a href=page8en.html>War of the Fifth Coalition 1809</a></li>
+
+            </ul>
+            <li class="side-item"><a href="page9.html">Russian campaign</a></li>
+            <li class="side-item"><a href="page10.html">War of the Sixth Coalition 1812-1816</a></li>
+            <li class="side-item"><a href="page11.html">Hundred Days</a></li>
+            <li class="side-item"><a href="test.html">Test!</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>>
+			</div>
+		</div>
+</nav>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+		
+		$(document).ready(function(){
+				$('ul li').click(function(){
+						$(this).siblings().removeClass('active');
+						$(this).toggleClass('active');
+		})
+	})
+	const sidebar = document.getElementById('sidebar');
+	const btn = document.getElementById('toggle-click');
+	btn.addEventListener('click', () => {
+	sidebar.classList.toggle ('active')
+	btn.classList.toggle ('active')
+})
+
+</script>
+
+
+<div class="lang-switcher">
+	<select id="language-selector" onchange="switchLanguage(this.value)">
+		<option value="En">🌐 Română</option>
+		<option value="Ro" selected>🌐 English </option>
+	</select>
+</div>
+
+<script type="text/javascript">
+  function switchLanguage(language) {
+
+		if (language === 'Ro') {
+      window.location.href = 'page8en.html';
+    } else {
+      window.location.href = 'page8.html';
+    }
+  }
+</script>
+<div class="lewe">
+	<b href="#" language='english' class="active">EN</b>
+	<b href="#" language='kazakh'>KA3</b>
+	<b href="#" language='japanese'>あ</b>
+	<div class="content">
+	<h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
+	<p class="description">?</p>
+	</div>
+</div>
+ <div class="epoca">
+			<a href="index.html">
+			<p class="epoca-text">Napoleonic</p>
+			<p class="epoca-text">Era</p>
+			</a>
+			</div>
+</div>
+
+
+
+
+
+
+<div class="gray-square">
+	
+
+		<div class="chestii">
+	<h1 class="mare">V.3 War of the Fifth Coalition 1809</h1>
+  <p class="long-paragraph">
+    The Fifth Coalition, formed in 1809, represented an attempt by the United Kingdom and the Austrian Empire to oppose Napoleon's expansion and French power. However, the United Kingdom largely remained alone in the struggle, focusing more on maritime forces than on land forces. The Royal Navy became a feared force, achieving successive victories in naval battles and blockading French ports. As for ground operations, the coalition had few notable successes. The British expedition to Walcheren in 1809 ended in disaster, and British land operations were limited to swift attacks, supported by the Royal Navy. In the Iberian Peninsula, the conflict began when Portugal continued trade with the United Kingdom, leading to the rupture of the alliance with France. French troops gradually occupied Spain, and British intervention followed soon after. In the east, Austria attempted to regain lost territories in Germany, but Napoleon managed to organize his forces and achieve decisive victories in the battles of Aspern-Essling and Wagram.
+
+
+	</p>
+		</div>
+		<div class="chestii2">
+		<p class="long-paragraph">
+     
+The war ended with the Treaty of Schönbrunn in 1809, consolidating Napoleon's control over Europe. Following this treaty, the French Empire reached its greatest territorial extent, and Napoleon married an Austrian archduchess, solidifying the alliance with Austria. Ultimately, the conflict once again demonstrated Napoleon's strength and dominance in Europe, consolidating his control over territories and alliances.
+
+
+	</p>
+	</div>
+</div>
+</body>
+</html>
