@@ -9,7 +9,6 @@
     <meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
     <meta property="og:title" content="Napoleon Bonaparte">
     <meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-    <meta property="og:image" context="Napoleon.png">
     <style>
         body   
         {
@@ -22,9 +21,28 @@
             
         }   
     </style>
+    <link rel="stylesheet" type="text/css" href="test.css">
 </head>
 
 <body>
+
+  <div class="rar">
+    <div id="question"></div>
+    <form id="options" style="color: #607E96;">
+      <input type="radio" name="answer" value="a" id="optionA">
+      <label for="optionA" style="color: #607E96; font-size: 26px;">Option A</label><br>
+      <input type="radio" name="answer" value="b" id="optionB">
+      <label for="optionB" style="color: #607E96; font-size: 26px;">Option B</label><br>
+      <input type="radio" name="answer" value="c" id="optionC">
+      <label for="optionC" style="color: #607E96; font-size: 26px;">Option C</label><br>
+      <input type="radio" name="answer" value="d" id="optionD">
+      <label for="optionD" style="color: #607E96; font-size: 26px;">Option D</label><br>
+    </form>
+    <button type="submit" onclick="submitAnswer()" style="background-color: #607E96; font-size: 50px; color: white; border: 2px solid black; padding: 10px; cursor: pointer;">Submit Answer</button>
+  </div>
+  
+  <script src="script.js"></script>
+
   <div class="top-line">
     <button class="toggle-menu" id="toggle-click"> 
       ☰

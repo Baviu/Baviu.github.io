@@ -1,0 +1,24 @@
+.rar {
+  width: 60%;
+  height: auto;
+  background-color: #32363D;
+  margin-left: 20%;
+  margin-top: 4%;
+  z-index: -2;
+  color: #ffffff;
+  text-align: center;
+  min-height: 800px;
+  padding: 20px;
+font-size: 50px;
+}
+
+.rar label {
+
+  align-items: center;
+  font-size: inherit;
+}
+
+.rar input[type="radio"] {
+  margin-right: 10px;
+  margin-bottom:30px;
+}
