@@ -1,26 +1,69 @@
 // Define your questions and answers
 const questions = [
   {
-    question: "Question 1: Which famous battle took place during the Napoleonic era?",
+    question: "Intrebarea 1: Ce bătălie faimoasa a avut loc in timpul Epocii Napoleoniene?",
     options: {
-      a: "Battle of Waterloo",
-      b: "Battle of Gettysburg",
-      c: "Battle of Stalingrad",
-      d: "Battle of Normandy"
+      a: "Lupta de la Waterloo",
+      b: "Lupta de la Gettysburg",
+      c: "Lupta de la Stalingrad",
+      d: "Lupta de la Normandy"
     },
     correctAnswer: "a"
   },
   {
-    question: "Question 2: Who was the leader of France during the Napoleonic era?",
+    question: "Intrebarea 2: Despre ce declarație este vorba în contextul Războiul primei coaliții?",
     options: {
-      a: "Napoleon Bonaparte",
-      b: "Louis XVI",
-      c: "Marie Antoinette",
-      d: "Robespierre"
+      a: "Declarația de la Versailles",
+      b: "Declarația de la Paris",
+      c: "Declarația de la Pillnitz",
+      d: "Declarația de la Viena"
     },
-    correctAnswer: "a"
+    correctAnswer: "c"
   },
-  // Add more questions here...
+  {
+  question: "Intrebarea 3: Care a fost domeniul în care Napoleon a demonstrat un talent deosebit după ce a fost tachinat de către ceilalți studenți la Academia Militară de la Brienne-le-Château?",
+  options: {
+    a: "Limba franceză",
+    b: "Matematica",
+    c: "Istoria",
+    d: "Geografia"
+  },
+  correctAnswer: "b"
+},
+
+{
+  question: "Intrebarea 4: Care a fost rezultatul bătăliei navale de la Nil din 1 august 1798, care a avut un impact semnificativ asupra campaniei franceze în Egipt?",
+  options: {
+    a: "Victoria flotei franceze",
+    b: "Înfrângerea ambelor flote",
+    c: "Un impas",
+    d: "Victoria flotei britanicee"
+  },
+  correctAnswer: "d"
+},
+{
+question: "Intrebarea 5: Când a avut loc lovitura de stat dată de către Napoleon?",
+options: {
+  a: "25 Vendémiaire",
+  b: "18 Brumarie",
+  c: "1 Pluviôse",
+  d: "19 Mars"
+},
+correctAnswer: "b"
+},
+
+{
+  question: "Intrebarea 6: Pentru a invada Rusia, câți soldați a utilizat Napoleon?",
+  options: {
+    a: "200.000 de soldați",
+    b: "1.000.000 de soldați",
+    c: "600.000 de soldați",
+    d: "450.000"
+  },
+  correctAnswer: "c"
+  },
+  
+  // intrebari daca vreau
 ];
 
 let currentQuestionIndex = 0;
