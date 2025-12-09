@@ -1,152 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-	<meta charset="UTF-8" />
-		<title>Franta Napoleoniana</title>
-		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="informatii.css">
-		<script src="app.js"></script>
-		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-		<meta property="og:title" content="Napoleon Bonaparte">
-		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-		<meta property="og:image" context="Napoleon.png">
-		<style>
-				body    
-				{
-						text-align: center;
-						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-attachment: fixed;
-						background-size: cover;
-				}   
-		</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon – Copilăria</title>
+
+    <link rel="stylesheet" href="modern.css">
+
+    <style>
+        /* MINI HERO HEADER (matches main page style) */
+        .sub-hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,20,0.92)),
+                        url("images/childhood_banner.png") center/cover no-repeat;
+            padding: 90px 30px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.5);
+        }
+
+        .sub-hero h1 {
+            font-size: 50px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+            margin-bottom: 10px;
+        }
+
+        .sub-hero p {
+            color: #e5e5e5;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Card image enhancements */
+        .section-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 18px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            float: right;
+            box-shadow: 0 0 18px rgba(0,0,0,0.45);
+        }
+
+        .section-img.large {
+            max-width: 500px;
+        }
+    </style>
 </head>
 
 <body>
-	<div class="top-line">
-		<button class="toggle-menu" id="toggle-click"> 
-			☰
-		</button>
-		<div class="logo-name">
-			<a href="index.html">
-			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-		</a>
-		</div>
-	</div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1.html">Copilăria</a></li>
-					<li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (I)</a>
-						<ul>
-							<li><a href=page2.html>Războiul primei coaliții</a></li>
-							<li><a href=page3.html>Războiul celei de-a doua coaliții</a></li>
-						</ul>
-            <li class="side-item"><a href="page4.html">Campania lui Napoleon în Egipt</a></li>
-            <li class="side-item"><a href="page5.html">Lovitura de stat</a></li>
-            <li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (II)</a>
-              <ul>
-                <li><a href=page6.html>A treia coaliție 1805</a></li>
-                <li><a href=page7.html>A patra coaliție 1806 - 1807</a></li>
-                <li><a href=page8.html>A cicea coaliție 1806 - 1807</a></li>
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Campania Din Rusia</a></li>
-              <li class="side-item"><a href="page10.html">Coalitia a Șasea</a></li>
-              <li class="side-item"><a href="page11.html">Cele o sută de zile</a></li>
-              <li class="side-item"><a href="test.html">Evaluare!</a></li>
-							<li class="side-item"><a href="credits.html">Bibgliografie</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>>
-			</div>
-		</div>
-	</nav>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  
-<script>
-		
-		$(document).ready(function(){
-				$('ul li').click(function(){
-						$(this).siblings().removeClass('active');
-						$(this).toggleClass('active');
-		})
-	})
-	const sidebar = document.getElementById('sidebar');
-	const btn = document.getElementById('toggle-click');
-	btn.addEventListener('click', () => {
-	sidebar.classList.toggle ('active')
-	btn.classList.toggle ('active')
-})
+<!-- SIDEBAR -->
+<nav id="sidebar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="page1.html">Copilăria</a></li>
+        <li><a href="page2.html">Războiul primei coaliții</a></li>
+        <li><a href="page3.html">Războiul celei de-a doua coaliții</a></li>
+        <li><a href="page4.html">Campania în Egipt</a></li>
+        <li><a href="page5.html">Lovitura de stat</a></li>
+        <li><a href="page6.html">A 3-a, a 4-a și a 5-a coaliție</a></li>
+        <li><a href="page7.html">Campania din Rusia</a></li>
+        <li><a href="page8.html" >Coaliția a Șasea</a></li>
+        <li><a href="page9.html"class="active">Perioada Celor o sută de zile</a></li>
+        <li><a href="credits.html">Bibliografie</a></li>
+    </ul>
+</nav>
 
-</script>
+<!-- PAGE CONTENT -->
+<div class="page-content">
 
-<div class="lang-switcher">
-	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option id="1" value="Ro" selected>🌐 Română </option>
-		<option id="2" value="En">🌐 English</option>
-	</select>
-</div>
+    <h1 class="main-title">Perioada Celor o sută de zile</h1>
 
-<script type="text/javascript">
-  function switchLanguage(language) {
-    if (language === 'Ro') {
-      window.location.href = 'page9.html';
-    } else if (language === 'En') {
-      window.location.href = 'page9en.html';
-    }
-  }
-</script>
+    <!-- SECTION 1 -->
+    <section class="card">
 
+        <p>
+<h2>Finalul.</h2>
+        Perioada Celor o sută de zile se referă la intervalul dintre întoarcerea lui Napoleon Bonaparte la Paris (20 martie 1815), după exilul său în Elba, și restaurarea regelui Ludovic al XVIII-lea la 8 iulie 1815. În timpul acestei perioade, a fost formată Coalitia a Șasea, care includea Austria, Prusia, Rusia, Regatul Unit și mai multe state germane, cu scopul de a-l învinge pe Napoleon. Coalitia a mobilizat aproape un milion de soldați, cu 85.000 de trupe austriece și piemontene în nordul și centrul Italiei, 168.000 de soldați ruși îndreptându-se spre centrul Germaniei, 225.000 de trupe austriece și germane staționate de-a lungul Rinului și 94.600 de soldați anglo-aliați în Belgia sub comanda Ducele de Wellington.
+        </p>
+<h2>Abdicarea Puterii</h2>
+        <p>
+Planul lui Napoleon era să împartă forțele inamice și să le înfrângă separat. El urmărea să învingă mai întâi armatele anglo-aliate și prusace în Belgia, înainte de a se întoarce împotriva forțelor austriece și ruse. Manevra lui Napoleon prin Charleroi, care implica lovitura între cele două armate inamice și tăierea liniilor lor de comunicare, a fost un succes. Această mișcare strategică a fost posibilă deoarece Coalitia nu anticipase că francezii vor folosi această rută dificilă, iar armatele prusace și anglo-aliate au fost surprinse de atacul francez. În ciuda victoriilor lui Napoleon la Ligny și Quatre Bras, el nu a reușit să obțină o victorie decisivă, iar armatele prusace și anglo-aliate au reușit să se retragă. Napoleon a făcut apoi o greșeală fatală prin împărțirea armatei sale și trimiterea unei părți mari cu Mareșalul Grouchy să urmărească prusacii în retragere, lăsându-l în minoritate la Waterloo. Bătălia de la Waterloo, luptată la 18 iunie 1815, s-a încheiat cu o victorie decisivă pentru Coalitie, iar Napoleon a fost nevoit să abdice pentru a doua oară.</p>
+    </section>
 
-<div class="lewe">
-	<b href="#" language='english' class="active">EN</b>
-	<b href="#" language='kazakh'>KA3</b>
-	<b href="#" language='japanese'>あ</b>
-	<div class="content">
-	<h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
-	<p class="description">?</p>
-	</div>
-</div>
+   </div>
 
- <div class="epoca">
-			<a href="index.html">
-			<p class="epoca-text">Napoleon</p>
-			<p class="epoca-text">și Epoca sa</p>
-			</a>
-			</div>
+<!-- JS -->
+<script src="app.js"></script>
 
-
-<div class="gray-square">
-	
-
-		<div class="chestii">
-	<h1 class="mare">VI. Campania din Rusia (1812)</h1>
-  <p class="long-paragraph">
-    În 1812, Napoleon Bonaparte, cunoscutul lider militar și cuceritor, a inițiat o campanie în Rusia, care avea să se dovedească a fi una dintre cele mai catastrofale înfrângeri din istoria sa. <br><br>Cu toate că avea la dispoziție cea mai mare armată europeană vreodată adunată, cu peste 600.000 de soldați, pregătirea sa a fost inadecvată pentru condițiile rusești.
-
-    În timpul campaniei, armata franceză s-a confruntat cu multiple provocări. Strategia rusă de pământ pârjolit, în care propriile teritorii erau incendiate și abandonate, a creat dificultăți majore pentru aprovizionarea armatei lui Napoleon. În plus, iarna a sosit mult mai devreme decât se aștepta, iar armata franceză nu era pregătită pentru temperaturile extreme și lipsa de echipament adecvat pentru condițiile meteorologice.
-	</p>
-		</div>
-		<div class="chestii2">
-		<p class="long-paragraph">
-      Deși au avut loc câteva succese inițiale, inclusiv ocuparea Moscovei, Napoleon și armata sa au fost forțați să se retragă în fața rezistenței rusești și a condițiilor grele. Retragerea a fost marcată de atacuri constante din partea armatei ruse și de condițiile severe ale iernii, care au dus la pierderi masive de vieți și la dezorganizarea armatei franceze.
-
-Întoarcerea în Franța a fost un moment de umilință pentru Napoleon, care și-a pierdut reputația de invincibilitate și a suferit o înfrângere decisivă. Campania din Rusia a marcat începutul sfârșitului pentru Napoleon și pentru Imperiul său, subliniind importanța pregătirii adecvate și a înțelegerii condițiilor de luptă în orice conflict militar.
-
-
-
-
-
-
-
-	</p>
-	</div>
-</div>
 </body>
 </html>

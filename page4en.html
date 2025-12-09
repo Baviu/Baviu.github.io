@@ -1,149 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-	<meta charset="UTF-8" />
-		<title>Franta Napoleoniana</title>
-		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="informatii.css">
-		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-		<meta property="og:title" content="Napoleon Bonaparte">
-		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-		<meta property="og:image" context="Napoleon.png">
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<style>
-				body    
-				{
-						text-align: center;
-						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-attachment: fixed;
-						background-size: cover;
-				}   
-		</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon – Copilăria</title>
+
+    <link rel="stylesheet" href="modern.css">
+
+    <style>
+        /* MINI HERO HEADER (matches main page style) */
+        .sub-hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,20,0.92)),
+                        url("images/childhood_banner.png") center/cover no-repeat;
+            padding: 90px 30px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.5);
+        }
+
+        .sub-hero h1 {
+            font-size: 50px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+            margin-bottom: 10px;
+        }
+
+        .sub-hero p {
+            color: #e5e5e5;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Card image enhancements */
+        .section-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 18px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            float: right;
+            box-shadow: 0 0 18px rgba(0,0,0,0.45);
+        }
+
+        .section-img.large {
+            max-width: 500px;
+        }
+    </style>
 </head>
 
 <body>
-	<div class="top-line">
-		<button class="toggle-menu" id="toggle-click"> 
-			☰
-		</button>
-		<div class="logo-name">
-			<a href="index.html">
-			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-		</a>
-		</div>
-	</div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1en.html">Childhood</a></li>
-					<li class="side-item sub-menu"><a>The wars of the coalitions (I)</a>
-						<ul>
-							<li><a href=page2en.html>War of the First Coalition</a></li>
-							<li><a href=page3en.html>War of the Second Coalition</a></li>
-						</ul>
-            <li class="side-item"><a href="page4en.html">Napoleon's Campaign in Egypt</a></li>
-            <li class="side-item"><a href="page5en.html">Coup of 18 Brumaire</a></li>
-            <li class="side-item sub-menu"><a>The wars of the coalitions (II)</a>
-              <ul>
-                <li><a href=page6en.html>War of the Third Coalition 1805</a></li>
-                <li><a href=page7en.html>War of the Forth Coalition 1806 - 1807</a></li>
-                <li><a href=page8en.html>War of the Fifth Coalition 1809</a></li>
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Russian campaign</a></li>
-              <li class="side-item"><a href="page10.html">War of the Sixth Coalition 1812-1816</a></li>
-              <li class="side-item"><a href="page11.html">Hundred Days</a></li>
-              <li class="side-item"><a href="test.html">Test!</a></li>
-				</ul>
-			</div>>
-			</div>
-		</div>
-	</nav>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
-<script>
-		$(document).ready(function(){
-				$('ul li').click(function(){
-						$(this).siblings().removeClass('active');
-						$(this).toggleClass('active');
-		})
-	})
-	const sidebar = document.getElementById('sidebar');
-	const btn = document.getElementById('toggle-click');
-	btn.addEventListener('click', () => {
-	sidebar.classList.toggle ('active')
-	btn.classList.toggle ('active')
-})
-</script>
+<!-- SIDEBAR -->
+<nav id="sidebar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="page1en.html">Childhood</a></li>
+<li><a href="page2en.html">War of the First Coalition</a></li>
+<li><a href="page3en.html">War of the Second Coalition</a></li>
+<li><a href="page4en.html"class="active">Campaign in Egypt</a></li>
+<li><a href="page5en.html">Coup d'état</a></li>
+<li><a href="page6en.html">3rd, 4th and 5th Coalitions</a></li>
+<li><a href="page7en.html">Campaign in Russia</a></li>
+<li><a href="page8en.html">Coalition of Six</a></li>
+<li><a href="page9en.html">The Hundred Days</a></li>
+<li><a href="credits.html">Bibliography</a></li>
+</ul>
+</nav>
 
-<div class="lang-switcher">
-	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option value="En">🌐 Română</option>
-		<option value="Ro" selected>🌐 English </option>
-	</select>
+<!-- PAGE CONTENT -->
+<div class="page-content">
+
+<h1 class="main-title">Napoleon's Campaign in Egypt</h1>
+
+<!-- SECTION 1 -->
+<section class="card">
+<h2>establishing an Egyptian colony</h2>
+<p>
+Napoleon's Campaign in Egypt, which took place between 1798 and 1801, was a French expedition with the aim of establishing a colony in Egypt and threatening British possessions in India.
+</p>
+<p>
+Despite initial victories, the campaign ultimately ended in failure. The expedition is notable for the discovery of the Rosetta Stone and the birth of modern Egyptology.
+</p>
+</section>
+
+<!-- SECTION 2 -->
+<section class="card">
+<p>
+The French army, led by General Napoleon Bonaparte, was initially successful. After a brief stop at Malta, where they captured the island, the French reached Alexandria and captured the city. They then marched on to Cairo, defeating a Mamluk army along the way at the Battle of the Pyramids. However, the French suffered a significant defeat at the Battle of the Nile, which took place on 1 August 1798. In this battle, the French fleet was almost completely destroyed by the British Navy, led by Admiral Horatio Nelson. This defeat cut off the French army from any supplies or reinforcements from France.
+</p>
+<p>
+Despite these obstacles, Napoleon attempted to win the sympathy of the Egyptian population by theological discussions with local sheikhs and by presenting himself as a liberator. He financed the three-day celebration of the birthday of the prophet Muhammad and established the Institut d'Egypte. Despite his efforts, the campaign ultimately ended in failure. Napoleon returned to France in 1799, leaving General Jean-Baptiste Kléber in command of the French forces.
+</p>
+</section>
+
+</section>
+
 </div>
 
-<script type="text/javascript">
-  function switchLanguage(language) {
+<!-- JS -->
+<script src="app.js"></script>
 
-		if (language === 'Ro') {
-      window.location.href = 'page4en.html';
-    } else {
-      window.location.href = 'page4.html';
-    }
-  }
-</script>
-
-<div class="lewe">
-	<b href="#" language='english' class="active">EN</b>
-	<b href="#" language='kazakh'>KA3</b>
-	<b href="#" language='japanese'>あ</b>
-	<div class="content">
-	<h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
-	<p class="description">?</p>
-	</div>
-</div>
- <div class="epoca">
-			<a href="index.html">
-			<p class="epoca-text">Napoleonic </p>
-			<p class="epoca-text">Era</p>
-			</a>
-			</div>
-</div>
-
-
-
-
-
-
-<div class="gray-square">
-
-		<div class="chestii">
-	<h1 class="mare">III. Napoleon's campaign in Egypt</h1>
-	<p class="long-paragraph">
-    Napoleon's campaign in Egypt, which took place from 1798 to 1801, was a French expedition to establish a colony in Egypt and to threaten British possessions in India.
-    Despite initial victories, the campaign ultimately ended in failure. The expedition is notable for the discovery of the Rosetta Stone and the birth of modern Egyptology.
-
-	</p>
-		</div>
-		<div class="chestii2">
-		<p class="long-paragraph">
-
-      The French army, led by General Napoleon Bonaparte, was initially successful. After a brief stop at Malta, where they took control of the island,
-      the French arrived in Alexandria and captured the city. They then marched to Cairo, defeating a Mamluk army along the way in the Battle of the Pyramids.
-     However, the French suffered a significant defeat at the Battle of the Nile, which took place on August 1, 1798. In this battle, the French fleet was almost completely 
-     destroyed by the British Navy, led by Admiral Horatio Nelson. This defeat cut off the French army from any supplies or reinforcements from France.
-     Despite these setbacks, Napoleon attempted to win over the Egyptian populace by engaging in theological discussions with local sheiks and presenting himself as a liberator.
-      He also funded a three-day celebration of the Prophet Muhammad's birthday and established the Institut d'Egypte.
-     Despite these efforts, the campaign ultimately ended in failure. Napoleon returned to France in 1799, leaving General Jean-Baptiste Kléber in charge of the French forces. 
-     Kléber was assassinated in 1800, and the French were finally defeated by the British and Ottomans in 1801.
-	</p>
-	</div>
-</div>
 </body>
 </html>

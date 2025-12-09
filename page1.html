@@ -1,174 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-	<meta charset="UTF-8" />
-		<title>Franta Napoleoniana</title>
-		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="informatii.css">
-		<script src="app.js"></script>
-		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-		<meta property="og:title" content="Napoleon Bonaparte">
-		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-		<meta property="og:image" context="Napoleon.png">
-		<style>
-				body    
-				{
-						text-align: center;
-						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-attachment: fixed;
-						background-size: cover;
-				}   
-		</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon – Copilăria</title>
+
+    <link rel="stylesheet" href="modern.css">
+
 </head>
 
 <body>
-	<div class="top-line">
-		<button class="toggle-menu" id="toggle-click"> 
-			☰
-		</button>
-		<div class="logo-name">
-			<a href="index.html">
-			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-		</a>
-		</div>
-	</div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1.html">Copilăria</a></li>
-					<li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (I)</a>
-						<ul>
-							<li><a href=page2.html>Războiul primei coaliții</a></li>
-							<li><a href=page3.html>Războiul celei de-a doua coaliții</a></li>
-						</ul>
-            <li class="side-item"><a href="page4.html">Campania lui Napoleon în Egipt</a></li>
-            <li class="side-item"><a href="page5.html">Lovitura de stat</a></li>
-            <li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (II)</a>
-              <ul>
-                <li><a href=page6.html>A treia coaliție 1805</a></li>
-                <li><a href=page7.html>A patra coaliție 1806 - 1807</a></li>
-                <li><a href=page8.html>A cicea coaliție 1806 - 1807</a></li>
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Campania Din Rusia</a></li>
-              <li class="side-item"><a href="page10.html">Coalitia a Șasea</a></li>
-              <li class="side-item"><a href="page11.html">Cele o sută de zile</a></li>
-              <li class="side-item"><a href="test.html">Evaluare!</a></li>
-							<li class="side-item"><a href="credits.html">Bibgliografie!</a></li>
-				</ul>
-			</div>>
-			</div>
-		</div>
-	</nav>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<nav id="sidebar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="page1.html"class="active">Copilăria</a></li>
+        <li><a href="page2.html">Războiul primei coaliții</a></li>
+        <li><a href="page3.html">Războiul celei de-a doua coaliții</a></li>
+        <li><a href="page4.html">Campania în Egipt</a></li>
+        <li><a href="page5.html">Lovitura de stat</a></li>
+        <li><a href="page6.html">A 3-a, a 4-a și a 5-a coaliție</a></li>
+        <li><a href="page7.html">Campania din Rusia</a></li>
+        <li><a href="page8.html">Coaliția a Șasea</a></li>
+        <li><a href="page9.html">Perioada Celor o sută de zile</a></li>
+        <li><a href="credits.html">Bibliografie</a></li>
+    </ul>
+</nav>
 
-<script>
-		
-		$(document).ready(function(){
-				$('ul li').click(function(){
-						$(this).siblings().removeClass('active');
-						$(this).toggleClass('active');
-		})
-	})
-	const sidebar = document.getElementById('sidebar');
-	const btn = document.getElementById('toggle-click');
-	btn.addEventListener('click', () => {
-	sidebar.classList.toggle ('active')
-	btn.classList.toggle ('active')
-})
+<!-- PAGE CONTENT -->
+<div class="page-content">
 
-</script>
+    <section class="sub-hero">
+        <h1>Copilăria lui Napoleon</h1>
+        <p>
+            Primii ani ai tânărului Napoleon Bonaparte, viitorul împărat al Franței.
+        </p>
+    </section>
 
-<div class="lang-switcher">
-	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option id="1" value="Ro" selected>🌐 Română </option>
-		<option id="2" value="En">🌐 English</option>
-	</select>
+    <!-- SECTION 1 -->
+    <section class="card wrap">
+        <img class="section-img" src="images/Portret.png" alt="Portret Napoleon copil">
+        <h2>I. Copilăria</h2>
+        <p>
+            <strong>Napoleon Bonaparte</strong> s-a născut ca al doilea din cei șapte copii, în Casa Buonaparte din orașul Ajaccio, Corsica,
+            la data de 15 august 1769, la un an după ce insula fusese transferată Franței de către Republica Genova.
+            Inițial purta numele de <em>Napoleone di Buonaparte</em>, provenit de la un unchi ucis în lupta împotriva francezilor.
+            Ulterior și-a adaptat numele la forma franceză <strong>Napoléon Bonaparte</strong>.
+        </p>
+        <p>
+            Tatăl său, Carlo Buonaparte, era avocat și reprezentant al Corsicii la curtea lui Ludovic al XVI-lea,
+            iar mama sa, Maria Letizia Ramolino, era cunoscută pentru disciplina sa severă, care a influențat puternic
+            caracterul lui Napoleon.
+        </p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="card wrap" style="margin-top: 35px;">
+        <img class="section-img large" src="images/ecole.png" alt="Școala militară">
+        <h2>Studiile lui Napoleon</h2>
+        <p>
+            Napoleon a fost botezat catolic și a început educația la o școală teologică, pentru a învăța limba franceză.
+            În mai 1779, a fost admis la Academia Militară din Brienne-le-Château, unde a excelat în special la matematică.
+        </p>
+
+        <p>
+            În 1784, a fost admis la prestigioasa <strong>École Militaire din Paris</strong>, pe care a absolvit-o în doar un an,
+            datorită efortului intens și situației familiale dificile după moartea tatălui. La vârsta de numai 16 ani, a devenit
+            sublocotenent de artilerie.
+        </p>
+
+        <p>
+            În timpul Revoluției Franceze, Napoleon s-a întors în Corsica, unde a susținut facțiunea iacobină.
+            A participat la conflicte politice și militare locale, iar pamfletul său pro-republican,
+            <em>„Le Souper de Beaucaire”</em>, i-a adus apreciere și avansarea în gradul de general de brigadă
+            după succesul său la Asediul Toulonului.
+        </p>
+    </section>
+
 </div>
 
-<script type="text/javascript">
-  function switchLanguage(language) {
-    if (language === 'Ro') {
-      window.location.href = 'page1.html';
-    } else if (language === 'En') {
-      window.location.href = 'page1en.html';
-    }
-  }
-</script>
+<script src="app.js"></script>
 
-<div class="lewe">
-	<b href="#" language='english' class="active">EN</b>
-	<b href="#" language='kazakh'>KA3</b>
-	<b href="#" language='japanese'>あ</b>
-	<div class="content">
-	<h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
-	<p class="description">?</p>
-	</div>
-
- <div class="epoca">
-			<a href="index.html">
-			<p class="epoca-text">Napoleon</p>
-			<p class="epoca-text">și Epoca sa</p>
-			</a>
-			</div>
-</div>
-</div>
-
-<div class="epoca">
-     <a href="index.html">
-     <p class="epoca-text">Napoleon</p>
-     <p class="epoca-text">și Epoca sa</p>
-     </a>  
-     </div>
-
-
-
-
-
-
-<div class="gray-square">
-	<img src="images/Designer.png" class="p1";>
-	
-		<div class="chestii">
-	<h1 class="mare">I. Copilăria</h1>
-	<p class="long-paragraph">
-		<strong>Napoleon Bonaparte</strong> s-a născut ca al doilea din cei șapte copii, în Casa Buonaparte din orașul Ajaccio, Corsica, 
-		la data de 15 august 1769, un an mai târziu după ce insula fusese transferată Franței de către Republica Genova. 
-		El s-a numit inițial "Napoleone di Buonaparte", prenumele provenind de la un unchi care fusese omorât în timp ce 
-		lupta împotriva francezilor, însă mai târziu a adoptat numele de Napoléon Bonaparte, cu o rezonanță mai accentuată 
-		în limba franceză.
-			Tatăl său, Carlo Buonaparte, era un avocat care a fost numit reprezentant al Corsicii la curtea lui Ludovic al XVI-lea, 
-			în timp ce mama sa, Maria Letizia Ramolino, era cunoscută pentru disciplina sa fermă.
-	</p>
-		</div>
-		<div class="chestii2">
-		<p class="long-paragraph">
-			Studiile sale:<br>
-<b>Napoleon</b> a fost botezat catolic și a urmat o școală teologică în Franța pentru a învăța limba franceză. 
-În luna mai a anului 1779, a fost admis la Academia Militară de la <br> Brienne-le-Château, unde era tachinat de către ceilalți
- studenți din cauza accentului său, si, prin urmare s-a concentrat și mai mult pe studiu, demonstand un talent deosebit 
- pentru matematică. <br> <br>După absolvire, in anul 1884 a  fost admis la École Militaire din Paris (algeand a se specializa pe 
- profilul de ofițer de artilerie), unde a trebuit să termine cursurile de doi ani într-unul singur, deoarece moartea tatălui
-său îi redusese drastic veniturile.<br><br> Primii ani ai Revoluției Franceze și i-a petrecut în Corsica, unde a sprijinit 
-facțiunea revoluționară iacobină. A luptat într-o bătălie complexă între regaliști, revoluționari și naționaliștii corsicani,
- iar după ce a depășit termenul permisiei, a condus o revoltă împotriva unei armate franceze din Corsica.
-În urma acestor evenimente, Napoleon a publicat un pamflet pro-republican, "Le Souper de Beaucaire", care i-a adus admirația
-lui Augustin Robespierre (avocat si politician ce si-a folosit influența în armata Italiei pentru a înainta cariera lui 
-Napoleon), a fost numit comandant al artileriei forțelor republicane de la asediul Toulonului, unde a adoptat un plan
-pentru a captura o poziție de pe un deal care să permită tunurilor republicane să domine portul orașului. Asaltul a 
-dus la capturarea orașului și la promovarea sa în gradul de general de brigadă.În urma acestor realizări,
-Napoleon a fost numit comandant al artileriei Armatei franceze a Italiei, funcție care i-a permis să aplice cunoștințele
-sale în practică.<br><br>
-În general, tinerețea și educația lui Napoleon au fost marcate de o serie de evenimente și experiențe 
-care l-au format pe viitorul împărat și au contribuit la dezvoltarea ambițiilor și cunoștințelor sale militare.
-	</p>
-	</div>
-	<img src="images/ecole.png" class="p2";>
-</div>
 </body>
 </html>

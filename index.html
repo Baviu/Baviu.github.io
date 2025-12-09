@@ -1,114 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-    <title>Franta Napoleoniana</title>
-    <link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-    <link rel="stylesheet" href="styles.css" href="butoane.css">
-    <script src="app.js"></script>
-    <meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-    <meta property="og:title" content="Napoleon Bonaparte">
-    <meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-    <meta property="og:image" context="Napoleon.png">
-    <style>
-        body   
-        {
-            text-align: center;
-            background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-attachment: fixed;
-            background-size: cover;
-            
-        }   
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon și Epoca Sa – Pagina Principală</title>
+
+    <link rel="stylesheet" href="modern.css">
 </head>
 
 <body>
-  <div class="top-line">
-    <button class="toggle-menu" id="toggle-click"> 
-      ☰
-    </button>
-    <div class="logo-name">
-      <a href="index.html">
-      <img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-    </a>
-    </div>
-  </div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1.html">Copilăria</a></li>
-					<li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (I)</a>
-						<ul>
-							<li><a href=page2.html>Războiul primei coaliții</a></li>
-							<li><a href=page3.html>Războiul celei de-a doua coaliții</a></li>
-						</ul>
-            <li class="side-item"><a href="page4.html">Campania lui Napoleon în Egipt</a></li>
-            <li class="side-item"><a href="page5.html">Lovitura de stat</a></li>
-            <li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (II)</a>
-              <ul>
-                <li><a href=page6.html>A treia coaliție 1805</a></li>
-                <li><a href=page7.html>A patra coaliție 1806 - 1807</a></li>
-                <li><a href=page8.html>A cicea coaliție 1806 - 1807</a></li>
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Campania Din Rusia</a></li>
-              <li class="side-item"><a href="page10.html">Coalitia a Șasea</a></li>
-              <li class="side-item"><a href="page11.html">Cele o sută de zile</a></li>
-              <li class="side-item"><a href="test.html">Evaluare!</a></li>
-              <li class="side-item"><a href="credits.html">Credite!</a></li>
-        </ul>
-      </div>>
-      </div>
-    </div>
-  </nav>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
 
-  <script>
-    $(document).ready(function(){
-        $('ul li').click(function(){
-            $(this).siblings().removeClass('active');
-            $(this).toggleClass('active');
-    })
-  })
-  const sidebar = document.getElementById('sidebar');
-  const btn = document.getElementById('toggle-click');
-  btn.addEventListener('click', () => {
-  sidebar.classList.toggle ('active')
-  btn.classList.toggle ('active')
-})
-  </script>
-	</div>
+<nav id="sidebar">
+    <ul>
+        <li><a href="index.html"class="active">Acasă</a></li>
+        <li><a href="page1.html">Copilăria</a></li>
+        <li><a href="page2.html">Războiul primei coaliții</a></li>
+        <li><a href="page3.html">Războiul celei de-a doua coaliții</a></li>
+        <li><a href="page4.html">Campania în Egipt</a></li>
+        <li><a href="page5.html">Lovitura de stat</a></li>
+        <li><a href="page6.html">A 3-a, a 4-a și a 5-a coaliție</a></li>
+        <li><a href="page7.html">Campania din Rusia</a></li>
+        <li><a href="page8.html">Coaliția a Șasea</a></li>
+        <li><a href="page9.html">Perioada Celor o sută de zile</a></li>
+        <li><a href="credits.html">Bibliografie</a></li>
+    </ul>
+</nav>
 
-  <div class="lang-switcher">
-    <select id="language-selector" onchange="switchLanguage(this.value)">
-      <option id="1" value="Ro" selected>🌐 Română </option>
-      <option id="2" value="En">🌐 English</option>
-    </select>
-  </div>
-  
-  <script type="text/javascript">
-    function switchLanguage(language) {
-      if (language === 'Ro') {
-        window.location.href = 'index.html';
-      } else if (language === 'En') {
-        window.location.href = 'indexen.html';
-      }
-    }
-  </script>
+<!-- PAGE CONTENT -->
+<div class="page-content">
 
-<div class="textbox">
-  <p class="textbox-text">Napoleon</p>
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <h1>Napoleon și Epoca Sa</h1>
+        <p>
+            Descoperă viața, ambițiile și marile campanii ale împăratului care a schimbat destinul Europei.
+        </p>
+    </section>
+
+    <!-- INTRO CARD -->
+    <section class="card wrap">
+        <img class="float-right" src="images/portret.png" alt="Portret Napoleon">
+        <h2>Introducere</h2>
+        <p>
+            <strong>Napoleon Bonaparte</strong> a fost una dintre cele mai complexe și influente figuri ale istoriei universale.
+            Prin talent militar, reforme politice și o ambiție enormă, el a reformat Franța și a modelat continentul european.
+        </p>
+        <p>
+            Acest site îți prezintă o călătorie completă prin momentele decisive ale vieții sale: copilăria, ascensiunea,
+            marile campanii, domnia ca împărat și prăbușirea finală.
+        </p>
+    </section>
+
+    <!-- SECTIONS OVERVIEW -->
+    <section class="card" style="margin-top: 40px;">
+        <h2>Explorați epocile lui Napoleon</h2>
+        <p>Alegeți o etapă pentru a continua explorarea.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-top: 25px;">
+
+            <a href="page1.html" class="overview-box">
+                <img src="images/copil.png" class="overview-img" alt="">
+                <h3>Copilăria</h3>
+                <p>Originile și educația tânărului Napoleon.</p>
+            </a>
+
+            <a href="page4.html" class="overview-box">
+                <img src="images/egypt.png" class="overview-img" alt="">
+                <h3>Campania din Egipt</h3>
+                <p>Război, știință și ambiție orientală.</p>
+            </a>
+
+            <a href="page7.html" class="overview-box">
+                <img src="images/rusia.png" class="overview-img" alt="">
+                <h3>Campania din Rusia</h3>
+                <p>Dezastru militar, retragere masivă, iarnă cruntă.</p>
+            </a>
+
+            <a href="page9.html" class="overview-box">
+                <img src="images/suta.png" class="overview-img" alt="">
+                <h3>Perioada Celor o sută de zile</h3>
+                <p>Revenirea lui Napoleon, înfrângere finală la Waterloo.</p>
+            </a>
+
+        </div>
+
+    </section>
+
 </div>
 
-<div class="epoca">
-  <a href="index.html">  
-  <p class="epoca-text">Napoleon</p>
-  <p class="epoca-text">și Epoca sa</p>
-</a>
-  </div>
+<script src="app.js"></script>
 </body>
 </html>

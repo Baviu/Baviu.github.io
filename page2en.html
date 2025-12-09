@@ -1,151 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-	<meta charset="UTF-8" />
-		<title>Franta Napoleoniana</title>
-		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="informatii.css">
-		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-		<meta property="og:title" content="Napoleon Bonaparte">
-		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-		<meta property="og:image" context="Napoleon.png">
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		
-		<style>
-				body    
-				{
-						text-align: center;
-						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-attachment: fixed;
-						background-size: cover;
-				}   
-		</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon – Copilăria</title>
+
+    <link rel="stylesheet" href="modern.css">
+
+    <style>
+        /* MINI HERO HEADER (matches main page style) */
+        .sub-hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,20,0.92)),
+                        url("images/childhood_banner.png") center/cover no-repeat;
+            padding: 90px 30px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.5);
+        }
+
+        .sub-hero h1 {
+            font-size: 50px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+            margin-bottom: 10px;
+        }
+
+        .sub-hero p {
+            color: #e5e5e5;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Card image enhancements */
+        .section-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 18px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            float: right;
+            box-shadow: 0 0 18px rgba(0,0,0,0.45);
+        }
+
+        .section-img.large {
+            max-width: 500px;
+        }
+    </style>
 </head>
 
-
 <body>
-	<div class="top-line">
-		<button class="toggle-menu" id="toggle-click"> 
-			☰
-		</button>
-		<div class="logo-name">
-			<a href="indexrn.html">
-			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-		</a>
-		</div>
-	</div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1en.html">Childhood</a></li>
-					<li class="side-item sub-menu"><a>The wars of the coalitions (I)</a>
-						<ul>
-							<li><a href=page2en.html>War of the First Coalition</a></li>
-							<li><a href=page3en.html>War of the Second Coalition</a></li>
-						</ul>
-            <li class="side-item"><a href="page4en.html">Napoleon's Campaign in Egypt</a></li>
-            <li class="side-item"><a href="page5en.html">Coup of 18 Brumaire</a></li>
-            <li class="side-item sub-menu"><a>The wars of the coalitions (II)</a>
-              <ul>
-                <li><a href=page6en.html>War of the Third Coalition 1805</a></li>
-                <li><a href=page7en.html>War of the Forth Coalition 1806 - 1807</a></li>
-                <li><a href=page8en.html>War of the Fifth Coalition 1809</a></li>
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Russian campaign</a></li>
-              <li class="side-item"><a href="page10.html">War of the Sixth Coalition 1812-1816</a></li>
-              <li class="side-item"><a href="page11.html">Hundred Days</a></li>
-              <li class="side-item"><a href="test.html">Test!</a></li>
-				</ul>
-			</div>>
-			</div>
-		</div>
-	</nav>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<!-- SIDEBAR -->
+<nav id="sidebar">
+<ul>
+<li><a href="indexen.html">Home</a></li>
+<li><a href="page1en.html">Childhood</a></li>
+<li><a href="page2en.html"class="active">War of the First Coalition</a></li>
+<li><a href="page3en.html">War of the Second Coalition</a></li>
+<li><a href="page4en.html">Campaign in Egypt</a></li>
+<li><a href="page5en.html">Coup d'état</a></li>
+<li><a href="page6en.html">3rd, 4th and 5th Coalitions</a></li>
+<li><a href="page7en.html">Campaign in Russia</a></li>
+<li><a href="page8en.html">Sixth Coalition</a></li>
+<li><a href="page9en.html">The Hundred Days</a></li>
+<li><a href="credits.html">Bibliography</a></li>
+</ul>
+</nav>
 
-<script>
-		$(document).ready(function(){
-				$('ul li').click(function(){
-						$(this).siblings().removeClass('active');
-						$(this).toggleClass('active');
-		})
-	})
-	const sidebar = document.getElementById('sidebar');
-	const btn = document.getElementById('toggle-click');
-	btn.addEventListener('click', () => {
-	sidebar.classList.toggle ('active')
-	btn.classList.toggle ('active')
-})
-</script>
+<!-- PAGE CONTENT -->
+<div class="page-content">
 
-<div class="lang-switcher">
-	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option value="En">🌐 Română</option>
-		<option value="Ro" selected>🌐 English </option>
-	</select>
+    <h1 class="main-title">War of the First Coalition</h1>
+
+<!-- SECTION 1 -->
+<section class="card">
+<h2>Conflict context</h2>
+<p>
+The War of the First Coalition was a conflict between the French First Republic and several European powers between 1792 and 1797.
+Although the European powers were collectively superior to France, they were not always coordinated in their actions.
+</p>
+<p>
+The war began with France's declaration of war against the Habsburg Monarchy in April 1792.
+In July of that year, a Prussian army entered France, but was defeated at the Battle of Valmy.
+</p>
+</section>
+
+<!-- SECTION 2 -->
+<section class="card">
+<h2>The First Stage of the War</h2>
+<p>
+In the early months of the war, the French army was poorly organized, and its commanders were inexperienced in large-scale European warfare.
+However, the enthusiasm and rapid mobilization of the population, through a measure called the <strong>levée en masse</strong>, compensated for the lack of military training.
+</p>
+<p>
+The Battle of Valmy, fought on September 20, 1792, marked the first major French victory against the coalition formed by Prussia and Austria.
+This victory strengthened the Republic and demonstrated that the French army could defeat more experienced powers.
+</p>
+</section>
+
+<!-- SECTION 3 -->
+<section class="card">
+<h2>Later campaigns</h2>
+<p>
+After Valmy, the French launched counteroffensives in the Rhine region and northern Italy.
+French troops captured strategic territory, and the military success was used to expand the Republic's political and economic influence.
+</p>
+<p>
+Austria was forced to cede the Austrian Netherlands and other territories by the Treaty of Campo Formio (October 1797).
+This was a major diplomatic and military victory, which established France as the dominant European power.
+</p>
+</section>
+
+<!-- SECTION 4 -->
+<section class="card">
+<h2>Impact on Europe</h2>
+<p>
+The War of the First Coalition changed the balance of power in Europe. Traditional monarchies began to fear the expansion of revolutionary ideas.
+France's influence expanded not only militarily, but also culturally and politically, promoting the principles of liberty, equality, and fraternity.
+</p>
+<p>
+Military conflicts also stimulated reforms in the armies of other states, which had to modernize their structure and tactics to meet new challenges.
+</p>
+</section>
+
+<!-- SECTION 5 -->
+<section class="card">
+<h2>The Role of Napoleon</h2>
+<p>
+During this period, Napoleon Bonaparte began his rise within the French army.
+His tactical and strategic contributions were recognized by his superiors, and his success in various missions attracted political attention.
+</p>
+<p>
+His pro-republican pamphlet <em>"Le Souper de Beaucaire"</em> demonstrated his ability to combine political influence with military strategy,
+preparing him for a decisive role in France's future campaigns.
+</p>
+</section>
+
 </div>
 
+<!-- JS -->
+<script src="app.js"></script>
 
-<script type="text/javascript">
-  function switchLanguage(language) {
-
-		if (language === 'Ro') {
-      window.location.href = 'page2en.html';
-    } else {
-      window.location.href = 'page2.html';
-    }
-  }
-</script>
-
-<div class="lewe">
-	<b href="#" language='english' class="active">EN</b>
-	<b href="#" language='kazakh'>KA3</b>
-	<b href="#" language='japanese'>あ</b>
-	<div class="content">
-	<h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
-	<p class="description">?</p>
-	</div>
-</div>
-
- <div class="epoca">
-			<a href="index.html">
-			<p class="epoca-text">Napoleonic </p>
-			<p class="epoca-text">Era</p>
-			</a>
-			</div>
-
-</div>
-
-
-<div class="gray-square">
-
-
-		<div class="chestii">
-	<h1 class="mare">II.1 The War of the First Coalition</h1>
-	<p class="long-paragraph">
-	
-		The War of the First Coalition was a conflict between the First French Republic and several European powers between 1792 and 1797. Although the European powers collectively were superior to France, they were not always coordinated in their actions due to various reasons, including divergent regional interests.
-
-		The war began with France's declaration of war against the Habsburg monarchy in April 1792. In July of the same year, a Prussian army entered France but was defeated at the Battle of Valmy. The coalition powers subsequently invaded France several times, and France suffered some defeats but none decisive.
-		
-		France responded with drastic measures, such as the introduction of the "levée en masse," which required all potential male recruits aged 18-25 to join the army. The new French armies managed to repel the invaders and advance beyond French territory.
-
-	</p>
-		</div>
-		<div class="chestii2">
-		<p class="long-paragraph">
-			In May 1795, the French established the Batavian Republic as a sister republic and gained Prussian recognition of French control over the left bank of the Rhine through the Peace of Basel. With the Treaty of Campo Formio, the Holy Roman Empire ceded Austrian Netherlands to France, and northern Italy was transformed into several client republics of the First French Republic. Spain separately concluded a peace agreement with France (known as the Second Treaty of Basel), and the French Directory made plans to conquer more of the Holy Roman Empire of that period.
-
-To the north of the Alps, Archduke Charles, Duke of Teschen, somewhat reversed the situation in 1796, but Napoleon blocked his advance in what was termed the "resolution of northern Italy," including defeating the temporary coalition of the Kingdom of Sardinia and Austria in northern Italy (1796-1797) near the Po Valley, culminating in the Treaties of Leoben and Campo Formio (in October 1797).
-
-Thus, the First Coalition against France collapsed, leaving only Great Britain in the fight against France.
-	</p>
-	</div>
-</div>
 </body>
 </html>

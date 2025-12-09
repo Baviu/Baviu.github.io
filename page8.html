@@ -1,151 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-	<meta charset="UTF-8" />
-		<title>Franta Napoleoniana</title>
-		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="informatii.css">
-		<script src="app.js"></script>
-		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-		<meta property="og:title" content="Napoleon Bonaparte">
-		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-		<meta property="og:image" context="Napoleon.png">
-		<style>
-				body    
-				{
-						text-align: center;
-						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-attachment: fixed;
-						background-size: cover;
-				}   
-		</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon – Copilăria</title>
+
+    <link rel="stylesheet" href="modern.css">
+
+    <style>
+        /* MINI HERO HEADER (matches main page style) */
+        .sub-hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,20,0.92)),
+                        url("images/childhood_banner.png") center/cover no-repeat;
+            padding: 90px 30px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.5);
+        }
+
+        .sub-hero h1 {
+            font-size: 50px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+            margin-bottom: 10px;
+        }
+
+        .sub-hero p {
+            color: #e5e5e5;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Card image enhancements */
+        .section-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 18px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            float: right;
+            box-shadow: 0 0 18px rgba(0,0,0,0.45);
+        }
+
+        .section-img.large {
+            max-width: 500px;
+        }
+    </style>
 </head>
 
-
 <body>
-	<div class="top-line">
-		<button class="toggle-menu" id="toggle-click"> 
-			☰
-		</button>
-		<div class="logo-name">
-			<a href="index.html">
-			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-		</a>
-		</div>
-	</div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1.html">Copilăria</a></li>
-					<li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (I)</a>
-						<ul>
-							<li><a href=page2.html>Războiul primei coaliții</a></li>
-							<li><a href=page3.html>Războiul celei de-a doua coaliții</a></li>
-						</ul>
-            <li class="side-item"><a href="page4.html">Campania lui Napoleon în Egipt</a></li>
-            <li class="side-item"><a href="page5.html">Lovitura de stat</a></li>
-            <li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (II)</a>
-              <ul>
-                <li><a href=page6.html>A treia coaliție 1805</a></li>
-                <li><a href=page7.html>A patra coaliție 1806 - 1807</a></li>
-                <li><a href=page8.html>A cicea coaliție 1806 - 1807</a></li>
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Campania Din Rusia</a></li>
-              <li class="side-item"><a href="page10.html">Coalitia a Șasea</a></li>
-              <li class="side-item"><a href="page11.html">Cele o sută de zile</a></li>
-              <li class="side-item"><a href="test.html">Evaluare!</a></li>
-							<li class="side-item"><a href="credits.html">Bibgliografie</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>>
-			</div>
-		</div>
-	</nav>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script>
-		
-		$(document).ready(function(){
-				$('ul li').click(function(){
-						$(this).siblings().removeClass('active');
-						$(this).toggleClass('active');
-		})
-	})
-	const sidebar = document.getElementById('sidebar');
-	const btn = document.getElementById('toggle-click');
-	btn.addEventListener('click', () => {
-	sidebar.classList.toggle ('active')
-	btn.classList.toggle ('active')
-})
-</script>
+<!-- SIDEBAR -->
+<nav id="sidebar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="page1.html">Copilăria</a></li>
+        <li><a href="page2.html">Războiul primei coaliții</a></li>
+        <li><a href="page3.html">Războiul celei de-a doua coaliții</a></li>
+        <li><a href="page4.html">Campania în Egipt</a></li>
+        <li><a href="page5.html">Lovitura de stat</a></li>
+        <li><a href="page6.html">A 3-a, a 4-a și a 5-a coaliție</a></li>
+        <li><a href="page7.html">Campania din Rusia</a></li>
+        <li><a href="page8.html"class="active">Coaliția a Șasea</a></li>
+        <li><a href="page9.html">Perioada Celor o sută de zile</a></li>
+        <li><a href="credits.html">Bibliografie</a></li>
+    </ul>
+</nav>
 
 
-<div class="lang-switcher">
-	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option id="1" value="Ro" selected>🌐 Română </option>
-		<option id="2" value="En">🌐 English</option>
-	</select>
-</div>
+<!-- PAGE CONTENT -->
+<div class="page-content">
 
-<script type="text/javascript">
-  function switchLanguage(language) {
-    if (language === 'Ro') {
-      window.location.href = 'page8.html';
-    } else if (language === 'En') {
-      window.location.href = 'page8en.html';
-    }
-  }
-</script>
+    <h1 class="main-title">Coalitia a Șasea</h1>
 
-<div class="lewe">
-	<b href="#" language='english' class="active">EN</b>
-	<b href="#" language='kazakh'>KA3</b>
-	<b href="#" language='japanese'>あ</b>
-	<div class="content">
-	<h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
-	<p class="description">?</p>
-	</div>
-</div>
+    <!-- SECTION 1 -->
+    <section class="card">
 
- <div class="epoca">
-			<a href="index.html">
-			<p class="epoca-text">Napoleon</p>
-			<p class="epoca-text">și Epoca sa</p>
-			</a>
-			</div>
+        <p>
+<h2>Alianța</h2>
+         Coalitia a Șasea a fost o alianță militară împotriva Imperiului Francez al lui Napoleon, formată din Austria, Prusia, Rusia, Suedia, Regatul Unit și mai multe state germane. Această coaliție a fost formată în contextul Războaielor Napoleoniene și a reușit să-l învingă pe Napoleon și să-l împingă în exil. Formarea Coalitiei a Șasea a fost determinată de invazia dezastruoasă a Rusiei de către Napoleon în 1812. După suferirea de pierderi grele, armata lui Napoleon a fost forțată să se retragă, iar mulți dintre aliații săi au început să ia în considerare rebeliunea. Convenția de la Tauroggen, semnată în decembrie 1812, a marcat un punct de cotitură semnificativ când generalul prusac Yorck von Wartenburg a declarat neutralitate și a refuzat să continue să susțină armata lui Napoleon. În februarie 1813, Austria și-a încheiat alianța cu Franța și a trecut la o poziție de neutralitate armată. Între timp, Suedia a intrat într-o alianță militară cu Regatul Unit și a declarat război Franței. Prusia a urmat exemplul și a declarat război Franței în martie 1813, iar primul conflict armat între Coaliție și Franța a avut loc la 5 aprilie.
+        </p>
+<h2>Reușite</h2>
+        <p>
+Coalitia a Șasea a reușit să profite de poziția slăbită a lui Napoleon în Războiul Peninsular, unde el retrăsese trupele pentru a-și întări forțele din Europa Centrală. Forțele anglo-spaniol-portugheze au profitat de această slăbiciune și până în iunie 1813 au învins decisiv forțele lui Napoleon în Spania. Victoria finală a Coalitiei a Șasea a venit în Bătălia de la Leipzig, cunoscută și sub numele de Bătălia Națiunilor, în octombrie 1813. Această bătălie a fost cea mai mare din istoria europeană înainte de Primul Război Mondial și a marcat începutul sfârșitului pentru imperiul lui Napoleon. Aliații au continuat să avanseze în Franța, ocupând în cele din urmă Parisul și forțându-l pe Napoleon să abdice. În concluzie, Coalitia a Șasea a fost o alianță militară semnificativă care a reușit să-l învingă pe Napoleon și să pună capăt imperiului său. Succesul coaliției a fost datorat unei combinații între poziția slăbită a lui Napoleon, dezertarea mai multor aliați și priceperea strategică și militară a liderilor Coaliției.</p>
+    </section>
 
+   </div>
 
+<!-- JS -->
+<script src="app.js"></script>
 
-<div class="gray-square">
-	
-
-		<div class="chestii">
-	<h1 class="mare">V.3. A cincea coaliție 1809</h1>
-  <p class="long-paragraph">
-    A Cincea Coaliție, formată în 1809, a reprezentat o încercare a Regatului Unit și a Imperiului Austriac de a se opune expansiunii lui Napoleon și a puterii franceze. Cu toate acestea, Regatul Unit a rămas în mare parte singur în luptă, axându-se mai mult pe forțele maritime decât pe cele terestre. Royal Navy a devenit o forță de temut, obținând victorii succesive în luptele maritime și blocând porturile franceze.
-
-În ceea ce privește operațiunile terestre, coaliția a avut puține succese notabile. Încercarea expediției britanice la Walcheren din 1809 s-a încheiat cu un dezastru, iar operațiunile terestre britanice s-au limitat la atacuri rapide, sprijinite de Royal Navy (Marina Regală Britanică).
-
-În Peninsula Iberică, conflictul a început când Portugalul a continuat comerțul cu Regatul Unit, provocând ruptura alianței cu Franța. Trupele franceze au ocupat treptat Spania, iar intervenția britanică a urmat curând.
-
-În răsărit, Austria a încercat să recâștige teritoriile pierdute în Germania, dar Napoleon a reușit să-și organizeze forțele și să obțină victorii decisive în bătăliile de la Aspern-Essling și Wagram.
-
-	</p>
-		</div>
-		<div class="chestii2">
-		<p class="long-paragraph">
-      Războiul a luat sfârșit cu tratatul de la Schönbrunn în 1809, consolidând controlul lui Napoleon asupra Europei. În urma acestui tratat, Imperiul Francez a ajuns la cea mai mare întindere teritorială, iar Napoleon s-a căsătorit cu o arhiducesă austriacă, consolidând alianța cu Austria.
-
-În final, conflictul a demonstrat din nou forța și dominanța lui Napoleon în Europa, consolidându-și controlul asupra teritoriilor și alianțelor. 
-	</p>
-	</div>
-</div>
 </body>
 </html>

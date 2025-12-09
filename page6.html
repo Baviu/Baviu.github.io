@@ -1,150 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-	<meta charset="UTF-8" />
-		<title>Franta Napoleoniana</title>
-		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="informatii.css">
-		<script src="app.js"></script>
-		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-		<meta property="og:title" content="Napoleon Bonaparte">
-		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-		<meta property="og:image" context="Napoleon.png">
-		<style>
-				body    
-				{
-						text-align: center;
-						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-attachment: fixed;
-						background-size: cover;
-				}   
-		</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon – Copilăria</title>
+
+    <link rel="stylesheet" href="modern.css">
+
+    <style>
+        /* MINI HERO HEADER (matches main page style) */
+        .sub-hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,20,0.92)),
+                        url("images/childhood_banner.png") center/cover no-repeat;
+            padding: 90px 30px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.5);
+        }
+
+        .sub-hero h1 {
+            font-size: 50px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+            margin-bottom: 10px;
+        }
+
+        .sub-hero p {
+            color: #e5e5e5;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Card image enhancements */
+        .section-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 18px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            float: right;
+            box-shadow: 0 0 18px rgba(0,0,0,0.45);
+        }
+
+        .section-img.large {
+            max-width: 500px;
+        }
+    </style>
 </head>
 
 <body>
-	<div class="top-line">
-		<button class="toggle-menu" id="toggle-click"> 
-			☰
-		</button>
-		<div class="logo-name">
-			<a href="index.html">
-			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-		</a>
-		</div>
-	</div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1.html">Copilăria</a></li>
-					<li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (I)</a>
-						<ul>
-							<li><a href=page2.html>Războiul primei coaliții</a></li>
-							<li><a href=page3.html>Războiul celei de-a doua coaliții</a></li>
-						</ul>
-            <li class="side-item"><a href="page4.html">Campania lui Napoleon în Egipt</a></li>
-            <li class="side-item"><a href="page5.html">Lovitura de stat</a></li>
-            <li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (II)</a>
-              <ul>
-                <li><a href=page6.html>A treia coaliție 1805</a></li>
-                <li><a href=page7.html>A patra coaliție 1806 - 1807</a></li>
-                <li><a href=page8.html>A cicea coaliție 1806 - 1807</a></li>
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Campania Din Rusia</a></li>
-              <li class="side-item"><a href="page10.html">Coalitia a Șasea</a></li>
-              <li class="side-item"><a href="page11.html">Cele o sută de zile</a></li>
-              <li class="side-item"><a href="test.html">Evaluare!</a></li>
-							<li class="side-item"><a href="credits.html">Bibgliografie</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>>
-			</div>
-		</div>
-	</nav>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<!-- SIDEBAR -->
+<nav id="sidebar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="page1.html">Copilăria</a></li>
+        <li><a href="page2.html">Războiul primei coaliții</a></li>
+        <li><a href="page3.html">Războiul celei de-a doua coaliții</a></li>
+        <li><a href="page4.html">Campania în Egipt</a></li>
+        <li><a href="page5.html">Lovitura de stat</a></li>
+        <li><a href="page6.html"class="active">A 3-a, a 4-a și a 5-a coaliție</a></li>
+        <li><a href="page7.html">Campania din Rusia</a></li>
+        <li><a href="page8.html">Coaliția a Șasea</a></li>
+        <li><a href="page9.html">Perioada Celor o sută de zile</a></li>
+        <li><a href="credits.html">Bibliografie</a></li>
+    </ul>
+</nav>
 
-<script>
-		$(document).ready(function(){
-				$('ul li').click(function(){
-						$(this).siblings().removeClass('active');
-						$(this).toggleClass('active');
-		})
-	})
-	const sidebar = document.getElementById('sidebar');
-	const btn = document.getElementById('toggle-click');
-	btn.addEventListener('click', () => {
-	sidebar.classList.toggle ('active')
-	btn.classList.toggle ('active')
-})
+<!-- PAGE CONTENT -->
+<div class="page-content">
 
-	</script>
+    <h1 class="main-title">A treia, A patra Și a Cincia Coaliție</h1>
 
-<div class="lang-switcher">
-	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option id="1" value="Ro" selected>🌐 Română </option>
-		<option id="2" value="En">🌐 English</option>
-	</select>
+    <!-- SECTION 1 -->
+    <section class="card">
+<h2>A treia coaliție 1805</h2>
+        <p>
+         Napoleon Bonaparte a conceput un plan masiv pentru a invada Insulele Britanice, adunând 180.000 de soldați la Boulogne. Pentru a realiza acest lucru, el a încercat să obțină superioritate navală, dar planurile sale s-au dovedit a fi eșuate.
+
+Flota franco-spaniolă condusă de amiralul Villeneuve a fost înfrântă în Bătălia de la Trafalgar de către Horatio Nelson, acesta din urmă pierzându-și viața în luptă. Napoleon a renunțat apoi la planul său de invazie a Marii Britanii și și-a îndreptat atenția către inamicii de pe continent.
+
+Conflictul naval și colonial care a precedat aceste evenimente a influențat decizia lui Napoleon de a renunța la invazia Marii Britanii. Conflictul din Caraibe și ocuparea bazelor coloniale au avut un impact direct asupra încleștărilor europene.
+        </p>
+        <p>
+Pe măsură ce Austria s-a alăturat coaliției împotriva Franței, Napoleon a trebuit să facă față unei armate austriece de aproximativ 70.000 de oameni. În timpul Campaniei de la Ulm, el a reușit să încercuiască și să forțeze capitularea armatei austriece conduse de Karl Mack von Leiberich.
+
+După aceea, el a ocupat Viena și s-a confruntat cu o armată ruso-austriacă superioară numeric. Decembrie 1805 a adus victoria decisivă pentru Napoleon în Bătălia de la Austerlitz, după care Austria a semnat Tratatul de la Pressburg, cedând Veneția și Tirolul. Cu retragerea Austriei din coaliție, Napoleon a devenit dominant pe continent, deși armata rusă încă nu intrase pe deplin în conflict.
+</p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="card">
+<h2>A patra coaliție 1806 - 1807</h2>
+        <p>
+          A Patra Coaliție, formată în 1806-1807, a reprezentat o încercare de opoziție împotriva expansiunii lui Napoleon și a puterii franceze. Aceasta a inclus Prusia, Imperiul Rus, Saxonia, Suedia și Regatul Unit al Marii Britanii și Irlandei. Coaliția s-a format rapid după destrămarea celei de-a Treia Coaliții. În iulie 1806, Napoleon a creat Confederația Rinului, transformând mai multe state germane în ducate și regate sub influența franceză, facilitând astfel guvernarea Germaniei non-prusace. În august, regele Prusiei a decis să intre în război independent de susținerea altor mari puteri. În septembrie, Napoleon a atacat forțele prusace, obținând victorii decisive în bătăliile de la Jena și Auerstädt. Berlinul a fost cucerit într-un timp record, iar Napoleon a emis decrete care au pus bazele Sistemului Continental, o blocadă comercială împotriva Regatului Unit.
+
+</p>
+<p>
+Prin tratatul de la Tilsit în 1807, țarul Alexandru I a fost obligat să facă pace cu Napoleon, iar Rusia a devenit un aliat temporar al Franței. Ulterior, Napoleon s-a concentrat pe alungarea forțelor ruse din Polonia și a creat Ducatul Varșoviei. În bătăliile de la Eylau și Friedland, armatele ruse au fost înfrânte, iar țarul a fost forțat să semneze tratatul de la Tilsit. La Congresul de la Erfurt, Napoleon și Alexandru au convenit să forțeze Suedia să adere la Sistemul Continental, declanșând Războiul Finlandez din 1808-1809 și divizând Suedia în două părți. Astfel, Coaliția a avut un impact semnificativ asupra politicii și evenimentelor europene din acea perioadă, marcând un moment crucial în confruntarea cu expansiunea lui Napoleon.
+</p>
+<p>
+În ansamblu, lovitura de stat de la 18 Brumair a fost un moment de cotitură în istoria franceză, marcând sfârșitul Revoluției Franceze și începutul unei noi perioade de stabilitate politică și dominație militară.
+        </p>
+    </section>
+
+ <!-- SECTION 2 -->
+    <section class="card">
+<h2>A cincea coaliție 1809</h2>
+        <p>
+          A Cincea Coaliție, formată în 1809, a reprezentat o încercare a Regatului Unit și a Imperiului Austriac de a se opune expansiunii lui Napoleon și a puterii franceze. Cu toate acestea, Regatul Unit a rămas în mare parte singur în luptă, axându-se mai mult pe forțele maritime decât pe cele terestre. Royal Navy a devenit o forță de temut, obținând victorii succesive în luptele maritime și blocând porturile franceze. În ceea ce privește operațiunile terestre, coaliția a avut puține succese notabile. Încercarea expediției britanice la Walcheren din 1809 s-a încheiat cu un dezastru, iar operațiunile terestre britanice s-au limitat la atacuri rapide, sprijinite de Royal Navy (Marina Regală Britanică). În Peninsula Iberică, conflictul a început când Portugalul a continuat comerțul cu Regatul Unit, provocând ruptura alianței cu Franța. Trupele franceze au ocupat treptat Spania, iar intervenția britanică a urmat curând. În răsărit, Austria a încercat să recâștige teritoriile pierdute în Germania, dar Napoleon a reușit să-și organizeze forțele și să obțină victorii decisive în bătăliile de la Aspern-Essling și Wagram.
+</p>
+<p>
+Războiul a luat sfârșit cu tratatul de la Schönbrunn în 1809, consolidând controlul lui Napoleon asupra Europei. În urma acestui tratat, Imperiul Francez a ajuns la cea mai mare întindere teritorială, iar Napoleon s-a căsătorit cu o arhiducesă austriacă, consolidând alianța cu Austria. În final, conflictul a demonstrat din nou forța și dominanța lui Napoleon în Europa, consolidându-și controlul asupra teritoriilor și alianțelor.
+</p>
+
+
 </div>
 
-<script type="text/javascript">
-  function switchLanguage(language) {
-    if (language === 'Ro') {
-      window.location.href = 'page6.html';
-    } else if (language === 'En') {
-      window.location.href = 'page6en.html';
-    }
-  }
-</script>
+<!-- JS -->
+<script src="app.js"></script>
 
-
-
-<div class="lewe">
-	<b href="#" language='english' class="active">EN</b>
-	<b href="#" language='kazakh'>KA3</b>
-	<b href="#" language='japanese'>あ</b>
-	<div class="content">
-	<h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
-	<p class="description">?</p>
-	</div>
-</div>
- <div class="epoca">
-			<a href="index.html">
-			<p class="epoca-text">Napoleon</p>
-			<p class="epoca-text">și Epoca sa</p>
-			</a>
-			</div>
-
-
-
-
-
-<div class="gray-square">
-	
-
-		<div class="chestii">
-	<h1 class="mare">V.1. A treia coaliție 1805</h1>
-  <p class="long-paragraph">
-    Napoleon Bonaparte a conceput un plan masiv pentru a invada Insulele Britanice, adunând 180.000 de soldați la Boulogne. Pentru a realiza acest lucru, el a încercat să obțină superioritate navală, dar planurile sale s-au dovedit a fi eșuate.<br><br> Flota franco-spaniolă condusă de amiralul Villeneuve a fost înfrântă în Bătălia de la Trafalgar de către Horatio Nelson, acesta din urmă pierzându-și viața în luptă. Napoleon a renunțat apoi la planul său de invazie a Marii Britanii și și-a îndreptat atenția către inamicii de pe continent.
-
-   <br><br> Conflictul naval și colonial care a precedat aceste evenimente a influențat decizia lui Napoleon de a renunța la invazia Marii Britanii. Conflictul din Caraibe și ocuparea bazelor coloniale au avut un impact direct asupra încleștărilor europene. 
-    
-    
-
-	</p>
-		</div>
-		<div class="chestii2">
-		<p class="long-paragraph">
-			Pe măsură ce Austria s-a alăturat coaliției împotriva Franței, Napoleon a trebuit să facă față unei armate austriece de aproximativ 70.000 de oameni. În timpul Campaniei de la Ulm, el a reușit să încercuiască și să forțeze capitularea armatei austriece conduse de Karl Mack von Leiberich.<br><br> După aceea, el a ocupat Viena și s-a confruntat cu o armată ruso-austriacă superioară numeric.
-    
-    Decembrie 1805 a adus victoria decisivă pentru Napoleon în Bătălia de la Austerlitz, după care Austria a semnat Tratatul de la Pressburg, cedând Veneția și Tirolul. Cu retragerea Austriei din coaliție, Napoleon a devenit dominant pe continent, deși armata rusă încă nu intrase pe deplin în conflict.
-	</p>
-	</div>
-</div>
 </body>
 </html>

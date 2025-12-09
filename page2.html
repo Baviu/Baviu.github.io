@@ -1,151 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-	<meta charset="UTF-8" />
-		<title>Franta Napoleoniana</title>
-		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="informatii.css">
-		<script src="app.js"></script>
-		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-		<meta property="og:title" content="Napoleon Bonaparte">
-		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-		<meta property="og:image" context="Napoleon.png">
-		<style>
-				body    
-				{
-						text-align: center;
-						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-attachment: fixed;
-						background-size: cover;
-				}   
-		</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon – Copilăria</title>
+
+    <link rel="stylesheet" href="modern.css">
+
+    <style>
+        /* MINI HERO HEADER (matches main page style) */
+        .sub-hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,20,0.92)),
+                        url("images/childhood_banner.png") center/cover no-repeat;
+            padding: 90px 30px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.5);
+        }
+
+        .sub-hero h1 {
+            font-size: 50px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+            margin-bottom: 10px;
+        }
+
+        .sub-hero p {
+            color: #e5e5e5;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Card image enhancements */
+        .section-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 18px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            float: right;
+            box-shadow: 0 0 18px rgba(0,0,0,0.45);
+        }
+
+        .section-img.large {
+            max-width: 500px;
+        }
+    </style>
 </head>
 
 <body>
-<div class="top-line">
-		<button class="toggle-menu" id="toggle-click"> 
-			☰
-		</button>
-		<div class="logo-name">
-			<a href="index.html">
-			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-		</a>
-		</div>
+
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="page1.html">Copilăria</a></li>
+        <li><a href="page2.html"class="active">Războiul primei coaliții</a></li>
+        <li><a href="page3.html">Războiul celei de-a doua coaliții</a></li>
+        <li><a href="page4.html">Campania în Egipt</a></li>
+        <li><a href="page5.html">Lovitura de stat</a></li>
+        <li><a href="page6.html">A 3-a, a 4-a și a 5-a coaliție</a></li>
+        <li><a href="page7.html">Campania din Rusia</a></li>
+        <li><a href="page8.html">Coaliția a Șasea</a></li>
+        <li><a href="page9.html">Perioada Celor o sută de zile</a></li>
+        <li><a href="credits.html">Bibliografie</a></li>
+    </ul>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="page-content">
+
+    <h1 class="main-title">Războiul primei coaliții</h1>
+
+    <!-- SECTION 1 -->
+    <section class="card">
+        <h2>Contextul conflictului</h2>
+        <p>
+            Războiul primei coaliții a fost un conflict între Prima Republică Franceză și mai multe puteri europene între anii 1792 și 1797.
+            Chiar dacă puterile europene erau colectiv superioare Franței, ele nu au fost întotdeauna coordonate în acțiunile lor.
+        </p>
+        <p>
+            Războiul a început cu declarația Franței de război împotriva monarhiei habsburgice în aprilie 1792.
+            În iulie același an, o armată prusacă a intrat în Franța, dar a fost învinsă în Bătălia de la Valmy.
+        </p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="card">
+        <h2>Prima etapă a războiului</h2>
+        <p>
+            În primele luni ale războiului, armata franceză era slab organizată, iar comandanții nu aveau experiență în războiul de amploare european.
+            Totuși, entuziasmul și mobilizarea rapidă a populației, prin măsura numită <strong>levée en masse</strong>, au compensat lipsa de pregătire militară.
+        </p>
+        <p>
+            Bătălia de la Valmy, desfășurată pe 20 septembrie 1792, a marcat prima mare victorie franceză împotriva coaliției formate din Prusia și Austria.
+            Această victorie a consolidat Republica și a demonstrat că armata franceză poate învinge puteri mai experimentate.
+        </p>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="card">
+        <h2>Campaniile ulterioare</h2>
+        <p>
+            După Valmy, francezii au lansat contraofensive în regiunea Rinului și în nordul Italiei.
+            Trupele franceze au cucerit teritorii strategice, iar succesul militar a fost folosit pentru a extinde influența politică și economică a Republicii.
+        </p>
+        <p>
+            Austria a fost obligată să cedeze Olanda Austriacă și alte teritorii prin Tratatul de la Campo Formio (octombrie 1797).
+            Aceasta a fost o victorie diplomatică și militară majoră, care a stabilit Franța ca putere europeană dominantă.
+        </p>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="card">
+        <h2>Impactul asupra Europei</h2>
+        <p>
+            Războiul primei coaliții a schimbat echilibrul de putere în Europa. Monarhiile tradiționale au început să se teamă de expansiunea ideilor revoluționare.
+            Influența Franței s-a extins nu doar militar, ci și cultural și politică, promovând principiile libertății, egalității și fraternității.
+        </p>
+        <p>
+            De asemenea, conflictele militare au stimulat reforme în armatele altor state, care au trebuit să modernizeze structura și tacticile pentru a face față noilor provocări.
+        </p>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section class="card">
+        <h2>Rolul lui Napoleon</h2>
+        <p>
+            În această perioadă, Napoleon Bonaparte și-a început ascensiunea în cadrul armatei franceze.
+            Contribuțiile sale tactice și strategice au fost recunoscute de superiori, iar succesul său în diverse misiuni a atras atenția politică.
+        </p>
+        <p>
+            Pamfletul său pro-republican <em>"Le Souper de Beaucaire"</em> a demonstrat abilitatea sa de a combina influența politică cu strategiile militare,
+            pregătindu-l pentru rolul decisiv în campaniile viitoare ale Franței.
+        </p>
+    </section>
+
 </div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1.html">Copilăria</a></li>
-					<li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (I)</a>
-						<ul>
-							<li><a href=page2.html>Războiul primei coaliții</a></li>
-							<li><a href=page3.html>Războiul celei de-a doua coaliții</a></li>
-						</ul>
-            <li class="side-item"><a href="page4.html">Campania lui Napoleon în Egipt</a></li>
-            <li class="side-item"><a href="page5.html">Lovitura de stat</a></li>
-            <li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (II)</a>
-              <ul>
-                <li><a href=page6.html>A treia coaliție 1805</a></li>
-                <li><a href=page7.html>A patra coaliție 1806 - 1807</a></li>
-                <li><a href=page8.html>A cicea coaliție 1806 - 1807</a></li>
+<!-- JS -->
+<script src="app.js"></script>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Campania Din Rusia</a></li>
-              <li class="side-item"><a href="page10.html">Coalitia a Șasea</a></li>
-              <li class="side-item"><a href="page11.html">Cele o sută de zile</a></li>
-              <li class="side-item"><a href="test.html">Evaluare!</a></li>
-							<li class="side-item"><a href="credits.html">Bibgliografie</a></li>
-				</ul>
-			</div>>
-			</div>
-		</div>
-	</nav>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-	<script>
-		$(document).ready(function(){
-				$('ul li').click(function(){
-						$(this).siblings().removeClass('active');
-						$(this).toggleClass('active');
-		})
-	})
-	const sidebar = document.getElementById('sidebar');
-	const btn = document.getElementById('toggle-click');
-	btn.addEventListener('click', () => {
-	sidebar.classList.toggle ('active')
-	btn.classList.toggle ('active')
-})
-
-	</script>
-
-<div class="lang-switcher">
-	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option id="1" value="Ro" selected>🌐 Română </option>
-		<option id="2" value="En">🌐 English</option>
-	</select>
-</div>
-
-<script type="text/javascript">
-  function switchLanguage(language) {
-    if (language === 'Ro') {
-      window.location.href = 'page2.html';
-    } else if (language === 'En') {
-      window.location.href = 'page2en.html';
-    }
-  }
-</script>
-
-<div class="lewe">
-  <b href="#" language='english' class="active">EN</b>
-  <b href="#" language='kazakh'>KA3</b>
-  <b href="#" language='japanese'>あ</b>
-  <div class="content">
-  <h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
-  <p class="description">?</p>
-</div>
-</div>
-
- <div class="epoca">
-			<a href="index.html">
-			<p class="epoca-text">Napoleon</p>
-			<p class="epoca-text">și Epoca sa</p>
-			</a>  
-			</div>
-
-
-
-
-
-
-
-
-<div class="gray-square">
-
-
-		<div class="chestii">
-	<h1 class="mare">II.1 Războiul primei coaliții</h1>
-	<p class="long-paragraph">
-		Războiul primei coaliții a fost un conflict între Prima Republică Franceză și mai multe puteri europene între anii 1792 și 1797. Chiar dacă puterile europene erau colectiv superioare Franței, ele nu au fost întotdeauna coordonate în acțiunile lor din diverse motive, inclusiv interese regionale divergente.
-
-Războiul a început cu declarația Franței de război împotriva monarhiei habsburgice în aprilie 1792. În iulie același an, o armată prusacă a intrat în Franța, dar a fost învinsă în Bătălia de la Valmy. Puterile coaliției au invadat ulterior Franța de mai multe ori, iar Franța a suferit unele înfrângeri, dar nu decisive.
-
-Franța a răspuns cu măsuri drastice, cum ar fi introducerea "levée en masse", care obliga toți bărbații potențiali în vârstă de 18-25 de ani să se alăture armatei. Noile armate franceze au reușit să respingă invadatorii și să avanseze dincolo de teritoriul francez.
-	</p>
-		</div>
-		<div class="chestii2">
-		<p class="long-paragraph">
-			În mai 1795, francezii au creat Republica Batavia ca o republică soră și au obținut recunoașterea prusacă a controlului francez asupra malului stâng al Rinului prin Pacea de la Basel. Odată cu Tratatul de la Campo Formio, Sfântul Imperiu Roman a cedat Olanda Austriacă Franței, iar nordul Italiei a fost transformat în mai multe republici subordonate Primei Republici Franceze. Spania a semnat un acord separat de pace cu Franța (cunoscut sub numele de Al Doilea Tratat de la Basel), iar Directoratul francez a planificat să cucerească mai mult din teritoriul Sfântului Imperiu Roman al acelei perioade.
-
-			La nord de Alpi, Arhiducele Charles, Ducele de Teschen, a îmbunătățit situația într-o oarecare măsură în 1796, dar Napoleon i-a blocat avansul în ceea ce a fost numit „rezolvarea nordului Italiei”. Acest lucru a inclus înfrângerea temporară a coaliției dintre Regatul Sardiniei și Austria în nordul Italiei (1796-1797), aproape de Valea Po, culminând cu semnarea Tratatelor de la Leoben și Campo Formio (în octombrie 1797).
-			
-			Astfel, Prima Coaliție împotriva Franței s-a dezintegrat, lăsând doar Marea Britanie în lupta 
-	</p>
-	</div>
-</div>
 </body>
 </html>

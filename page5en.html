@@ -1,142 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-	<meta charset="UTF-8" />
-		<title>Franta Napoleoniana</title>
-		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="informatii.css">
-		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-		<meta property="og:title" content="Napoleon Bonaparte">
-		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-		<meta property="og:image" context="Napoleon.png">
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<style>
-				body    
-				{
-						text-align: center;
-						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-attachment: fixed;
-						background-size: cover;
-				}   
-		</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon – Copilăria</title>
+
+    <link rel="stylesheet" href="modern.css">
+
+    <style>
+        /* MINI HERO HEADER (matches main page style) */
+        .sub-hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,20,0.92)),
+                        url("images/childhood_banner.png") center/cover no-repeat;
+            padding: 90px 30px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.5);
+        }
+
+        .sub-hero h1 {
+            font-size: 50px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+            margin-bottom: 10px;
+        }
+
+        .sub-hero p {
+            color: #e5e5e5;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Card image enhancements */
+        .section-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 18px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            float: right;
+            box-shadow: 0 0 18px rgba(0,0,0,0.45);
+        }
+
+        .section-img.large {
+            max-width: 500px;
+        }
+    </style>
 </head>
 
 <body>
-	<div class="top-line">
-		<button class="toggle-menu" id="toggle-click"> 
-			☰
-		</button>
-		<div class="logo-name">
-			<a href="index.html">
-			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-		</a>
-		</div>
-	</div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1en.html">Childhood</a></li>
-					<li class="side-item sub-menu"><a>The wars of the coalitions (I)</a>
-						<ul>
-							<li><a href=page2en.html>War of the First Coalition</a></li>
-							<li><a href=page3en.html>War of the Second Coalition</a></li>
-						</ul>
-            <li class="side-item"><a href="page4en.html">Napoleon's Campaign in Egypt</a></li>
-            <li class="side-item"><a href="page5en.html">Coup of 18 Brumaire</a></li>
-            <li class="side-item sub-menu"><a>The wars of the coalitions (II)</a>
-              <ul>
-                <li><a href=page6en.html>War of the Third Coalition 1805</a></li>
-                <li><a href=page7en.html>War of the Forth Coalition 1806 - 1807</a></li>
-                <li><a href=page8en.html>War of the Fifth Coalition 1809</a></li>
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Russian campaign</a></li>
-              <li class="side-item"><a href="page10.html">War of the Sixth Coalition 1812-1816</a></li>
-              <li class="side-item"><a href="page11.html">Hundred Days</a></li>
-              <li class="side-item"><a href="test.html">Test!</a></li>
-				</ul>
-			</div>>
-			</div>
-		</div>
-	</nav>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<!-- SIDEBAR -->
+<nav id="sidebar">
+<ul>
+<li><a href="indexen.html">Home</a></li>
+<li><a href="page1en.html">Childhood</a></li>
+<li><a href="page2en.html">War of the First Coalition</a></li>
+<li><a href="page3n.html">War of the Second Coalition</a></li>
+<li><a href="page4en.html">Campaign in Egypt</a></li>
+<li><a href="page5en.html"class="active">Coup d'état</a></li>
+<li><a href="page6en.html">3rd, 4th and 5th Coalitions</a></li>
+<li><a href="page7en.html">Campaign in Russia</a></li>
+<li><a href="page8en.html">Coalition of Six</a></li>
+<li><a href="page9en.html">The Hundred Days</a></li>
+<li><a href="credits.html">Bibliography</a></li>
+</ul>
+</nav>
 
-<script>
-		$(document).ready(function(){
-				$('ul li').click(function(){
-						$(this).siblings().removeClass('active');
-						$(this).toggleClass('active');
-		})
-	})
-	const sidebar = document.getElementById('sidebar');
-	const btn = document.getElementById('toggle-click');
-	btn.addEventListener('click', () => {
-	sidebar.classList.toggle ('active')
-	btn.classList.toggle ('active')
-})
-</script>
+<!-- PAGE CONTENT -->
+<div class="page-content">
 
-<div class="lang-switcher">
-	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option value="En">🌐 Română</option>
-		<option value="Ro" selected>🌐 English </option>
-	</select>
+<h1 class="main-title">Coup d'Etat</h1>
+
+<!-- SECTION 1 -->
+<section class="card">
+<h2>18 Brumaire</h2>
+<p>
+The coup d'état of 18 Brumaire (Jacobin-imposed calendar - November 9–10, 1799), was a bloodless coup d'état that overthrew the French Directory and brought Napoleon Bonaparte to power as First Consul of France.
+</p>
+<p>
+The coup was led by Napoleon, Emmanuel Joseph Sieyès, and Roger Ducos, who were members of the Directory.
+
+The conspirators took advantage of the growing restlessness and fatigue of the French people, who had become tired of the political instability and constant state of war in which the country found itself. The coup d'état was carried out in a series of carefully calculated moves.
+
+The Directory was weakened by the resignation of three of its five members, making it difficult for the government to function. At the same time, Napoleon and his allies spread false rumors of an imminent Jacobin uprising in Paris, causing the Council of Ancients and the Council of Five Hundred (the two legislative bodies of the Directory) to flee to the safety of the Château de Saint-Cloud, located outside the city. </p>
+</section>
+
+<!-- SECTION 2 -->
+<section class="card">
+<p>
+Napoleon was then placed in charge of securing the Councils and given command of local troops, which he used to intimidate and control the members of the Councils. The coup was completed when the Councils passed a decree dissolving the existing government and appointing the three conspirators as provisional consuls. The lack of popular resistance to the coup signaled the end of the French Revolution and paved the way for Napoleon's subsequent rise to power.
+
+</p>
+<p>
+Overall, the coup of 18 Brumaire was a turning point in French history, marking the end of the French Revolution and the beginning of a new period of political stability and military dominance.
+</p>
+</section>
+
+</section>
+
 </div>
 
-<script type="text/javascript">
-  function switchLanguage(language) {
+<!-- JS -->
+<script src="app.js"></script>
 
-		if (language === 'Ro') {
-      window.location.href = 'page5en.html';
-    } else {
-      window.location.href = 'page5.html';
-    }
-  }
-</script>
-
-<div class="lewe">
-	<b href="#" language='english' class="active">EN</b>
-	<b href="#" language='kazakh'>KA3</b>
-	<b href="#" language='japanese'>あ</b>
-	<div class="content">
-	<h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
-	<p class="description">?</p>
-	</div>
-</div>
- <div class="epoca">
-			<a href="index.html">
-			<p class="epoca-text">Napoleonic </p>
-			<p class="epoca-text">Era</p>
-			</a>
-			</div>
-</div>
-
-
-
-<div class="gray-square">
-
-		<div class="chestii">
-	<h1 class="mare">IV. Coup of 18 Brumaire</h1>
-	<p class="long-paragraph">
-    The coup d'état of the 18th Brumaire (calendar imposed by the Jacobins), which took place on 9-10 November 1799, was a bloodless coup that overturned the French Directory and brought Napoleon Bonaparte to power as the First Consul of France.
-    The coup was led by Napoleon, Emmanuel Joseph Sieyès, and Roger Ducos, who were members of the Directory, and Paul Barras, who was a member of the political elite. The conspirators took advantage of the growing unrest and fatigue among the French people, who had become tired of the political instability and constant state of war in the country.
-The coup unfolded in a series of precisely calculated moves. The Directory was weakened by the resignation of three of its five members, making it difficult for the government to function. At the same time, Napoleon and his allies spread false rumors about an imminent Jacobin revolt in Paris, causing the Council of Ancients and the Council of Five Hundred (the two legislative bodies of the Directory) to flee safely to the Château de Saint-Cloud castle located outside the city.
-
-	</p>
-		</div>
-		<div class="chestii2">
-		<p class="long-paragraph">
-      Napoleon was then appointed to secure the Councils and was given command over local troops, which he used to intimidate and control members of the Councils. The coup was finalized when the Councils passed a decree dissolving the existing government and appointing the three conspirators as provisional consuls. The lack of popular resistance to the coup signaled the end of the French Revolution and paved the way for Napoleon's subsequent rise to power.
-
-      Overall, the coup of the 18th Brumaire was a turning point in French history, marking the end of the French Revolution and the beginning of a new period of political stability and military dominance.
-
-	</p>
-	</div>
-</div>
 </body>
 </html>

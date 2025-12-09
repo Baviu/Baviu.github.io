@@ -1,155 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-	<meta charset="UTF-8" />
-		<title>Franta Napoleoniana</title>
-		<link rel="icon" type="image/png" href="images/logo3-removebg-preview.png" sizes="196x196">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="informatii.css">
-		<meta name="viewport" content="initial-scale=1" width="device-width">      <!-- SCALE TELEFON   -->
-		<meta property="og:title" content="Napoleon Bonaparte">
-		<meta property="og:description" context=" Franța Napoleoniană - O perioadă importanta din istoria Franței.">
-		<meta property="og:image" context="Napoleon.png">
-		<style>
-				body    
-				{
-						text-align: center;
-						background-image: url('images/98056b76-1d9a-4400-862d-cf17e6874f3c.png');
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-attachment: fixed;
-						background-size: cover;
-				}   
-		</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Napoleon – Copilăria</title>
+
+    <link rel="stylesheet" href="modern.css">
+
+    <style>
+        /* MINI HERO HEADER (matches main page style) */
+        .sub-hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,20,0.92)),
+                        url("images/childhood_banner.png") center/cover no-repeat;
+            padding: 90px 30px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.5);
+        }
+
+        .sub-hero h1 {
+            font-size: 50px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+            margin-bottom: 10px;
+        }
+
+        .sub-hero p {
+            color: #e5e5e5;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Card image enhancements */
+        .section-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 18px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            float: right;
+            box-shadow: 0 0 18px rgba(0,0,0,0.45);
+        }
+
+        .section-img.large {
+            max-width: 500px;
+        }
+    </style>
 </head>
 
 <body>
-<div class="top-line">
-		<button class="toggle-menu" id="toggle-click"> 
-			☰
-		</button>
-		<div class="logo-name">
-			<a href="index.html">
-			<img class="logo" src="images/logo2.png" alt="Logo" style="position: absolute; right: -75px; top: -85px;">
-		</a>
-		</div>
-</div>
 
-	<nav id="sidebar">
-		<div class="sidebar-content">
-			<div clas="sidebar">
-				<ul class="side-link">
-					<li class="side-item"><a href="page1.html">Copilăria</a></li>
-					<li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (I)</a>
-						<ul>
-							<li><a href=page2.html>Războiul primei coaliții</a></li>
-							<li><a href=page3.html>Războiul celei de-a doua coaliții</a></li>
-						</ul>
-            <li class="side-item"><a href="page4.html">Campania lui Napoleon în Egipt</a></li>
-            <li class="side-item"><a href="page5.html">Lovitura de stat</a></li>
-            <li class="side-item sub-menu"><a>Războaiele Epocii Napoleoniene (II)</a>
-              <ul>
-                <li><a href=page6.html>A treia coaliție 1805</a></li>
-                <li><a href=page7.html>A patra coaliție 1806 - 1807</a></li>
-                <li><a href=page8.html>A cicea coaliție 1806 - 1807</a></li>
+<label class="lang-switch">
+    <input type="checkbox" id="lang-toggle">
+    <div class="slider"></div>
+    <span class="lang ro">RO</span>
+    <span class="lang en">EN</span>
+</label>
+<button class="toggle-menu" onclick="toggleSidebar()">☰</button>
 
-              </ul>
-              <li class="side-item"><a href="page9.html">Campania Din Rusia</a></li>
-              <li class="side-item"><a href="page10.html">Coalitia a Șasea</a></li>
-              <li class="side-item"><a href="page11.html">Cele o sută de zile</a></li>
-              <li class="side-item"><a href="test.html">Evaluare!</a></li>
-							<li class="side-item"><a href="credits.html">Bibgliografie</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>>
-			</div>
-		</div>
-	</nav>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<!-- SIDEBAR -->
+<nav id="sidebar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="page1.html">Copilăria</a></li>
+        <li><a href="page2.html">Războiul primei coaliții</a></li>
+        <li><a href="page3.html">Războiul celei de-a doua coaliții</a></li>
+        <li><a href="page4.html">Campania în Egipt</a></li>
+        <li><a href="page5.html"class="active">Lovitura de stat</a></li>
+        <li><a href="page6.html">A 3-a, a 4-a și a 5-a coaliție</a></li>
+        <li><a href="page7.html">Campania din Rusia</a></li>
+        <li><a href="page8.html">Coaliția a Șasea</a></li>
+        <li><a href="page9.html">Perioada Celor o sută de zile</a></li>
+        <li><a href="credits.html">Bibliografie</a></li>
+    </ul>
+</nav>
 
-<script>
-		
-		$(document).ready(function(){
-				$('ul li').click(function(){
-						$(this).siblings().removeClass('active');
-						$(this).toggleClass('active');
-		})
-	})
-	const sidebar = document.getElementById('sidebar');
-	const btn = document.getElementById('toggle-click');
-	btn.addEventListener('click', () => {
-	sidebar.classList.toggle ('active')
-	btn.classList.toggle ('active')
-})
+<!-- PAGE CONTENT -->
+<div class="page-content">
 
-</script>
+    <h1 class="main-title">Lovitura De Stat</h1>
 
-<div class="lang-switcher">
-	<select id="language-selector" onchange="switchLanguage(this.value)">
-		<option id="1" value="Ro" selected>🌐 Română </option>
-		<option id="2" value="En">🌐 English</option>
-	</select>
-</div>
+    <!-- SECTION 1 -->
+    <section class="card">
+<h2>18 Brumair</h2>
+        <p>
+          Lovitura de stat de la 18 Brumair (calendar impus de către iacobini - 9-10 noiembrie 1799), a fost o lovitură de stat fără vărsare de sânge care a răsturnat Directoriul Francez și a dus la putere pe Napoleon Bonaparte în calitate de Prim-Consul al Franței.
+        </p>
+        <p>
+Lovitura a fost condusă de Napoleon, Emmanuel Joseph Sieyès și Roger Ducos, care erau membri ai Directoriului.
 
-<script type="text/javascript">
-  function switchLanguage(language) {
-    if (language === 'Ro') {
-      window.location.href = 'page5.html';
-    } else if (language === 'En') {
-      window.location.href = 'page5en.html';
-    }
-  }
-</script>
+Conspiratorii au profitat de neliniștea și oboseala crescândă din partea poporului francez, care deveniseră obosiți de instabilitatea politică și de constanta stare de război în care se afla țara. Lovitura de stat s-a desfășurat într-o serie de mutări precis calculate.
 
-<div class="lewe">
-	<b href="#" language='english' class="active">EN</b>
-	<b href="#" language='kazakh'>KA3</b>
-	<b href="#" language='japanese'>あ</b>
-	<div class="content">
-	<h2 class="title">nu trebuie sa vezi asta, shhhh</h2>
-	<p class="description">?</p>
-	</div>
+Directoriul a fost slăbit prin demisia a trei dintre cei cinci membri, fapt ce a făcut dificilă funcționarea guvernul. În același timp, Napoleon și aliații săi au răspândit zvonuri false despre o revoltă iminentă jacobină la Paris, ceea ce a făcut Consiliul Ancientilor și Consiliul Celor Cinci Sute (cele două corpuri legislative ale Directoriului) să fugă în siguranță la castelul
+Château de Saint-Cloud, situat în afara orașului.        </p>
+    </section>
 
- <div class="epoca">
-			<a href="index.html">
-			<p class="epoca-text">Napoleon</p>
-			<p class="epoca-text">și Epoca sa</p>
-			</a>
-			</div>
-</div>
-</div>
-<div class="epoca">
-     <a href="index.html">
-     <p class="epoca-text">Napoleon</p>
-     <p class="epoca-text">și Epoca sa</p>
-     </a>  
-     </div>
+    <!-- SECTION 2 -->
+    <section class="card">
+        <p>
+           Napoleon a fost apoi pus în funcția de securizare a Consiliilor și a primit comanda asupra trupelor locale, care a utilizat-o pentru a intimida și controla membrii Consiliilor. Lovitura de stat a fost finalizată când Consiliile au trecut un decret care dizolva guvernul existent și numea pe cei trei conspiratori în funcția de consuli provizori. Lipsa rezistenței populare la lovitură de stat a semnalat sfârșitul Revoluției Franceze și a pregătit calea pentru ascensiunea ulterioară a lui Napoleon la putere.
 
 
-
-
-<div class="gray-square">
-
-
-		<div class="chestii">
-	<h1 class="mare">IV. Lovitura De Stat</h1>
-  <p class="long-paragraph">
-  Lovitura de stat de la 18 Brumair (calendar impus de către iacobini - 9-10 noiembrie 1799), a fost o lovitură de stat fără vărsare de sânge care a răsturnat Directoriul Francez și a dus la putere pe Napoleon Bonaparte în calitate de Prim-Consul al Franței.
-<br><br>
-  Lovitura a fost condusă de Napoleon, Emmanuel Joseph Sieyès și Roger Ducos, care erau membri ai Directoriului.<br><br> Conspiratorii au profitat de neliniștea și oboseala crescândă din partea poporului francez, care deveniseră obosiți de instabilitatea politică și de constanta stare de război în care se afla țara.
-  
-  Lovitura de stat s-a desfășurat într-o serie de mutări precis calculate.<br><br> Directoriul a fost slăbit prin demisia a trei dintre cei cinci membri, fapt ce a făcut dificilă funcționarea guvernul. În același timp, Napoleon și aliații săi au răspândit zvonuri false despre o revoltă iminentă jacobină la Paris, ceea ce a făcut Consiliul Ancientilor și Consiliul Celor Cinci Sute (cele două corpuri legislative ale Directoriului) să fugă în siguranță la castelul <br>Château de Saint-Cloud, situat în afara orașului.
-
-	</p>
-		</div>
-		<div class="chestii2">
-		<p class="long-paragraph">
-			Napoleon a fost apoi pus în funcția de securizare a Consiliilor și a primit comanda asupra trupelor locale, care a utilizat-o pentru a intimida și controla membrii Consiliilor. Lovitura de stat a fost finalizată când Consiliile au trecut un decret care dizolva guvernul existent și numea pe cei trei conspiratori în funcția de consuli provizori. Lipsa rezistenței populare la lovitură de stat a semnalat sfârșitul Revoluției Franceze și a pregătit calea pentru ascensiunea ulterioară a lui Napoleon la putere.
-<br><br>
+</p>
+<p>
 În ansamblu, lovitura de stat de la 18 Brumair a fost un moment de cotitură în istoria franceză, marcând sfârșitul Revoluției Franceze și începutul unei noi perioade de stabilitate politică și dominație militară.
-	</p>
-	</div>
+        </p>
+    </section>
+
+
+    </section>
+
 </div>
+
+<!-- JS -->
+<script src="app.js"></script>
+
 </body>
 </html>
